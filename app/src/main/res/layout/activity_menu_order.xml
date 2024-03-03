@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#FEFEFE"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuOrderActivity">
+    <RadioGroup
+        android:layout_marginStart="20dp"
+        android:id="@+id/groupRadiogroup"
+        android:layout_width="184dp"
+        android:layout_height="138dp"
+        app:layout_constraintBottom_toTopOf="@+id/evMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdChecbox">
+
+        <RadioButton
+            android:id="@+id/firstRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="маленька" />
+
+        <RadioButton
+            android:id="@+id/secondRadiobatton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="середня" />
+
+        <RadioButton
+            android:id="@+id/thirthRadiobatton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="велика" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/secondChecbox"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/f3" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.981"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/f2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/rbnew"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/thirdChecbox"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/f4" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/firstChecbox"
+        android:layout_width="174dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="28dp"
+        android:text="AmiacMick"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="159dp"
+        android:layout_height="24dp"
+        android:text="Гібрид"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <CheckBox
+        android:id="@+id/thirdChecbox"
+        android:layout_width="174dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:text="MaksimFRS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondChecbox" />
+
+    <CheckBox
+        android:id="@+id/secondChecbox"
+        android:layout_width="173dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:text="shavild"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintVertical_bias="0.272" />
+
+    <TextView
+        android:id="@+id/evMenu"
+        android:layout_width="193dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="152dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rbnew"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rbnew"
+        android:layout_width="144dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/evMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/groupRadiogroup"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.391">
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NovaPoshta" />
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ukr" />
+
+        <RadioButton
+            android:id="@+id/radioButton9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delivery" />
+    </RadioGroup>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNextResultActivity"
+        android:layout_width="201dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn3"
+        android:text="Далі"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="4dp"
+        android:textSize="15sp"
+        android:text="Розмір"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/groupRadiogroup"
+        app:layout_constraintEnd_toEndOf="@+id/groupRadiogroup"
+        app:layout_constraintStart_toStartOf="@+id/groupRadiogroup" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="131dp"
+        android:layout_height="24dp"
+        android:text="Пошта"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/rbnew"
+        app:layout_constraintEnd_toEndOf="@+id/rbnew"
+        app:layout_constraintStart_toStartOf="@+id/rbnew" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:text="Товар"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="#D8D8D8"
+    tools:context=".ImageAnswear">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_gallery"
+        android:layout_width="204dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="15dp"
+
+
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/img_2"
+        android:gravity="bottom|center_horizontal"
+        android:onClick="chooseFromGallery"
+
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/btn_camera"
+        app:layout_constraintHorizontal_bias="1.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_camera"
+        android:layout_width="188dp"
+        android:layout_height="110dp"
+
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/img_1"
+        android:onClick="takePhoto"
+
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="382dp"
+        android:layout_height="383dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/btn3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_camera" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="406dp"
+        android:layout_height="113dp"
+        android:padding="8dp"
+        android:text=""
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

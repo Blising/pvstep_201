@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FEFEFE"
+    tools:context=".MainActivity">
+
+    <!-- Logo Image -->
+
+    <!-- Profile Image and Other Views -->
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logoImage"
+        android:layout_width="329dp"
+        android:layout_height="249dp"
+        android:backgroundTint="#868D99"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/photoimage"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImage"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/logoImage"
+        tools:layout_editor_absoluteX="0dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImage"
+            android:layout_width="1sp"
+            android:layout_height="1sp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <!-- Buttons -->
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/singIn"
+        android:layout_width="308dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogout"
+        app:layout_constraintEnd_toEndOf="@+id/logoImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/logoImage"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogout"
+        android:layout_width="305dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn3"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/singIn"
+        app:layout_constraintStart_toStartOf="@+id/singIn"
+        app:layout_constraintTop_toBottomOf="@+id/singIn" />
+
+    <!-- Placeholder for Name -->
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <!-- Placeholder for Email -->
+    <TextView
+        android:id="@+id/mailTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+
+    <!-- None Account View -->
+    <TextView
+        android:id="@+id/NoneAccountView"
+        android:layout_width="234dp"
+        android:layout_height="35dp"
+        android:text="Немає облікового запису ?"
+        android:textAlignment="center"
+        android:textColor="#1E1E1E"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnLogout"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogout"
+        app:layout_constraintVertical_bias="0.698" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
