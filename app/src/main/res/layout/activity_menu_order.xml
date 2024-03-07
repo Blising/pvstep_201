@@ -2,217 +2,244 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:background="#FEFEFE"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
-    tools:context=".MenuOrderActivity">
-    <RadioGroup
-        android:layout_marginStart="20dp"
-        android:id="@+id/groupRadiogroup"
-        android:layout_width="184dp"
-        android:layout_height="138dp"
-        app:layout_constraintBottom_toTopOf="@+id/evMenu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/thirdChecbox">
+    android:id="@+id/main"
+    android:background="#D2D2D2"
+    tools:context=".MenuOrderActivity">>
 
-        <RadioButton
-            android:id="@+id/firstRadioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="маленька" />
-
-        <RadioButton
-            android:id="@+id/secondRadiobatton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="середня" />
-
-        <RadioButton
-            android:id="@+id/thirthRadiobatton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="велика" />
-    </RadioGroup>
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/secondChecbox"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/f3" />
-
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/firstRow"
+        android:layout_width="405dp"
+        android:layout_height="244dp"
+        android:layout_marginTop="16dp"
+        android:paddingTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.981"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/f2" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/rbnew"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/thirdChecbox"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/f4" />
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <CheckBox
-        android:id="@+id/firstChecbox"
-        android:layout_width="174dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="28dp"
-        android:text="AmiacMick"
-
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="159dp"
-        android:layout_height="24dp"
-        android:text="Гібрид"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="2dp" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="169dp"
+            android:layout_height="47dp"
+            android:text="Гібрид"
+            android:textAlignment="center"
+            android:textSize="30sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="220dp"
+            android:layout_height="46dp"
+            android:text="Товар"
+
+            android:textAlignment="center"
+            android:textSize="30sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <CheckBox
+            android:id="@+id/firstChecbox"
+            android:layout_width="213dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="12dp"
+
+            android:text="AmiacMick"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/secondChecbox" />
+
+        <CheckBox
+            android:id="@+id/thirdChecbox"
+            android:layout_width="220dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="4dp"
+            android:text="MaksimFRS"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/firstChecbox"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstChecbox" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="151dp"
+            android:layout_height="155dp"
 
 
-    <CheckBox
-        android:id="@+id/thirdChecbox"
-        android:layout_width="174dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="12dp"
-        android:text="MaksimFRS"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secondChecbox" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/firstChecbox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.645"
+            app:srcCompat="@drawable/f4" />
 
-    <CheckBox
-        android:id="@+id/secondChecbox"
-        android:layout_width="173dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="12dp"
-        android:text="shavild"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
+        <CheckBox
+            android:id="@+id/secondChecbox"
+            android:layout_width="202dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
 
-        app:layout_constraintVertical_bias="0.272" />
+            android:text="shavild"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/firstChecbox"
+            app:layout_constraintHorizontal_bias="0.361"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/evMenu"
-        android:layout_width="193dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="152dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rbnew"
-        app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <RadioGroup
-        android:id="@+id/rbnew"
-        android:layout_width="144dp"
-        android:layout_height="162dp"
-        android:layout_marginStart="32dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/twoRow"
+        android:layout_width="405dp"
+        android:layout_height="256dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/evMenu"
+
+        android:paddingTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/groupRadiogroup"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.391">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstRow">
 
-        <RadioButton
-            android:id="@+id/radioButton7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="NovaPoshta" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="222dp"
+            android:layout_height="54dp"
+            android:text="Розмір"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioButton8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ukr" />
+        <RadioGroup
+            android:id="@+id/groupRadiogroup"
+            android:layout_width="217dp"
+            android:layout_height="147dp"
 
-        <RadioButton
-            android:id="@+id/radioButton9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Delivery" />
-    </RadioGroup>
 
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <RadioButton
+                android:id="@+id/firstRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="маленька"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/secondRadiobatton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="середня"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/thirthRadiobatton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="велика"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rbnew"
+            android:layout_width="173dp"
+            android:layout_height="158dp"
+
+            android:layout_marginEnd="-70dp"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toEndOf="@+id/groupRadiogroup"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="NovaPoshta"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Ukr"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton9"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Delivery"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="185dp"
+
+            android:layout_height="39dp"
+            android:layout_marginStart="89dp"
+
+            android:text="Пошта"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/threeRow"
+        android:layout_width="394dp"
+        android:layout_height="96dp"
+        android:paddingTop="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextResultActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twoRow">
+
+        <TextView
+            android:id="@+id/evMenu"
+            android:layout_width="292dp"
+            android:layout_height="69dp"
+            android:text="TextView"
+            android:textAlignment="center"
+
+
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnNextResultActivity"
-        android:layout_width="201dp"
-        android:layout_height="53dp"
+        android:layout_width="314dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/btn3"
         android:text="Далі"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="186dp"
-        android:layout_height="34dp"
-        android:layout_marginBottom="4dp"
-        android:textSize="15sp"
-        android:text="Розмір"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/groupRadiogroup"
-        app:layout_constraintEnd_toEndOf="@+id/groupRadiogroup"
-        app:layout_constraintStart_toStartOf="@+id/groupRadiogroup" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="131dp"
-        android:layout_height="24dp"
-        android:text="Пошта"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/rbnew"
-        app:layout_constraintEnd_toEndOf="@+id/rbnew"
-        app:layout_constraintStart_toStartOf="@+id/rbnew" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:text="Товар"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

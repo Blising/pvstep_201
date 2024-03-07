@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="#FEFEFE"
+    android:background="#D2D2D2"
     tools:context=".MainActivity">
 
     <!-- Logo Image -->
@@ -19,12 +18,12 @@
         android:backgroundTint="#868D99"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="116dp"
-        android:background="@drawable/photoimage"
+
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logoobtack" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"

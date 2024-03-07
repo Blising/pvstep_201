@@ -5,75 +5,96 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FEFEFE"
+    android:background="#D2D2D2"
     tools:context=".RoomUsersActivity">
 
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/profileImage"
-        android:layout_width="257dp"
-        android:layout_height="225dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerRow"
+        android:layout_width="405dp"
+        android:layout_height="295dp"
+        android:paddingTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/displayNameTextView"
-        android:layout_width="279dp"
-        android:layout_height="41dp"
-        android:layout_below="@id/profileImage"
-        android:layout_centerHorizontal="true"
-        android:text="Display Name"
-        android:textAlignment="center"
-        android:textAllCaps="true"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImage"
+            android:layout_width="257dp"
+            android:layout_height="225dp"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.603"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnExit"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/twooRow"
+        android:layout_width="403dp"
+        android:layout_height="218dp"
+        android:paddingTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView"
-        app:layout_constraintVertical_bias="0.214" />
+        app:layout_constraintTop_toBottomOf="@+id/headerRow">
 
-    <TextView
-        android:id="@+id/emailTextView"
-        android:layout_width="262dp"
-        android:layout_height="41dp"
-        android:layout_below="@id/displayNameTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:shadowColor="#B30A0A"
-        android:text="Email"
-        android:textAlignment="center"
+        <TextView
+            android:id="@+id/displayNameTextView"
+            android:layout_width="279dp"
+            android:layout_height="41dp"
 
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+            android:layout_centerHorizontal="true"
+            android:text="Display Name"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextView"
+            app:layout_constraintVertical_bias="0.214" />
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="262dp"
+            android:layout_height="41dp"
+            android:layout_below="@id/displayNameTextView"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginTop="4dp"
+            android:shadowColor="#B30A0A"
+            android:text="Email"
+
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.588"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnExit"
         android:layout_width="323dp"
         android:layout_height="68dp"
-        android:layout_below="@+id/emailTextView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="28dp"
         android:background="@drawable/btn3"
         android:text="btnExit"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twooRow"
+        app:layout_constraintVertical_bias="0.613" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

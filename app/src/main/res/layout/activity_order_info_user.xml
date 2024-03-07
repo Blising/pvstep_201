@@ -5,34 +5,96 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FEFEFE"
+    android:background="#D2D2D2"
     tools:context=".OrderInfoUser">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="319dp"
-        android:layout_height="250dp"
-        android:background="@drawable/btn2"
 
-        android:layout_marginTop="116dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/twoRow"
+        android:layout_width="390dp"
+        android:layout_height="317dp"
+
+        android:paddingTop="10sp"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/welcome" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="295dp"
+            android:layout_height="204dp"
+
+            android:background="#D2D2D2"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/twoRow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/tuda" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/firstoRow"
+        android:layout_width="381dp"
+        android:layout_height="199dp"
+
+        android:paddingTop="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twoRow"
+        app:layout_constraintVertical_bias="0.358">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputName"
+            android:layout_width="299dp"
+            android:layout_height="71dp"
+
+            android:background="@color/white"
+            android:hint="your name"
+            android:textAlignment="center"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etNumber"
+            android:layout_width="299dp"
+            android:layout_height="71dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Input Numbers"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputName"
+            tools:text="@tools:sample/us_phones" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSave"
         android:layout_width="315dp"
         android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/btn3"
         android:enabled="false"
         android:text="Save"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNumber" />
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -43,32 +105,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputName"
-        android:layout_width="299dp"
-        android:layout_height="71dp"
 
-        android:layout_marginTop="104dp"
-        android:hint="your name"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <EditText
-        android:id="@+id/etNumber"
-        android:layout_width="299dp"
-        android:layout_height="71dp"
-
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:hint="Input Numbers"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputName"
-        tools:text="@tools:sample/us_phones" />
 </androidx.constraintlayout.widget.ConstraintLayout>

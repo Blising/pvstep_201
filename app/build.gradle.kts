@@ -37,6 +37,11 @@ android {
 }
 
 dependencies {
+    //noinspection GradleCompatible,GradleCompatible
+    implementation(fileTree("libs") {
+        include("*.jar")
+    })
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.android.gms:play-services-auth:21.0.0")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
