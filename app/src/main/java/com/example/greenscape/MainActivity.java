@@ -19,27 +19,28 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.common.SignInButton;// Кнопка входу з Google
+import com.google.android.gms.common.api.ApiException;// Обробка помилок API
+import com.google.android.gms.tasks.OnCompleteListener;// Слухач завершення завдань
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.imageview.ShapeableImageView;
-import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseApp;// Ініціалізація Firebase
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.auth.FirebaseAuth; // Автентифікація Firebase
+import com.google.firebase.auth.GoogleAuthProvider;// Провайдер автентифікації Google
 
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
-    FirebaseAuth auth;
-    GoogleSignInClient googleSignInClient;
-    ShapeableImageView imageView;
-    TextView name, mail,NoneAccountView;
+    FirebaseAuth auth;// Об'єкт аутентифікації Firebase
+    GoogleSignInClient googleSignInClient;// Клієнт входу Google
+    ShapeableImageView imageView;// Зображення користувача
+    TextView name, mail,NoneAccountView;// TextView для імені, пошти, підказки відсутності акаунта
+
 
     private Button bLogout;
-
+    // Обробник результату запуску активності для входу Google
     private final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
@@ -82,23 +83,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FirebaseApp.initializeApp(this);
-        imageView = findViewById(R.id.profileImage);
-        name = findViewById(R.id.nameTV);
-        NoneAccountView = findViewById(R.id.NoneAccountView);
-        mail = findViewById(R.id.mailTV);
-        bLogout = findViewById(R.id.btnLogout);
+        FirebaseApp.initializeApp(this);// Ініціалізація Firebase
+        imageView = findViewById(R.id.profileImage);// Зображення користувача
+        name = findViewById(R.id.nameTV);// Ім'я користувача
+        NoneAccountView = findViewById(R.id.NoneAccountView);// Підказка про відсутність акаунта
+        mail = findViewById(R.id.mailTV);// Електронна пошта користувача
+        bLogout = findViewById(R.id.btnLogout); // Кнопка виходу
         NoneAccountView.setOnClickListener(this::ToastNoneAccount);
         bLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Вихід з облікового запису
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(intent);
                 finish(); // закрити поточне активіті
             }
         });
-
+        // Налаштування опцій для входу Google
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.client_id))
                 .requestEmail()
@@ -115,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
+    // Відображення підказки про відсутність акаунта
     private void ToastNoneAccount(View view) {
         Toast.makeText(MainActivity.this,"Push Sigin", Toast.LENGTH_SHORT).show();
     }
