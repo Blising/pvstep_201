@@ -24,6 +24,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnExit;
     private Button btnStorage;
     private Button bCreateOrder;
+    private Button btnDb;
     private SearchView searchView;
 
     // Firebase authentication
@@ -43,6 +44,8 @@ public class MenuActivity extends AppCompatActivity {
         bSearchRecycle  = findViewById(R.id.searchView);
         bAnswearCv = findViewById(R.id.imageAi);
         searchView = findViewById(R.id.searchForMeny);
+        btnDb = findViewById(R.id.btnSomfingElse);
+
 
         // Initialize Firebase authentication
         auth = FirebaseAuth.getInstance();
@@ -55,6 +58,13 @@ public class MenuActivity extends AppCompatActivity {
         bSearchRecycle.setOnClickListener(this::GotoSearchList);
         bAnswearCv.setOnClickListener(this::GoToAnswearWithImage);
         searchView.setOnClickListener(this::ToastSearchView);
+        btnDb.setOnClickListener(this::GotoDbInfo);
+    }
+
+    private void GotoDbInfo(View view) {
+        Toast.makeText(this, "Go to Db Info", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MenuActivity.this, InfoFromDb.class);
+        startActivity(intent);
     }
 
     // Method to display a toast message when the search view is clicked

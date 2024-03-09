@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#D2D2D2"
     tools:context=".MenuActivity">
-
+    <!-- Перший ряд -->
     <!-- Пошукова строка -->
     <SearchView
         android:id="@+id/searchForMeny"
@@ -149,7 +149,8 @@
             android:layout_marginEnd="8dp"
             android:background="@drawable/logoobtack"
             android:gravity="bottom|left"
-            android:text="Somfing else"
+            android:text="Go db ingo
+"
             android:textColor="#0E0501"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
