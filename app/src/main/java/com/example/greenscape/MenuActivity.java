@@ -6,12 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -21,11 +19,13 @@ public class MenuActivity extends AppCompatActivity {
     private Button bUroom;
     private Button bSearchRecycle;
     private Button bAnswearCv;
+    private Button btnNext;
+
     private Button btnExit;
     private Button btnStorage;
     private Button bCreateOrder;
     private Button btnDb;
-    private SearchView searchView;
+    private Button btnGoPlat;
 
     // Firebase authentication
     private FirebaseAuth auth;
@@ -43,33 +43,44 @@ public class MenuActivity extends AppCompatActivity {
         bCreateOrder= findViewById(R.id.bCreateOrder);
         bSearchRecycle  = findViewById(R.id.searchView);
         bAnswearCv = findViewById(R.id.imageAi);
-        searchView = findViewById(R.id.searchForMeny);
+        btnGoPlat = findViewById(R.id.plantsCrud);
         btnDb = findViewById(R.id.btnSomfingElse);
-
+        btnNext =  findViewById(R.id.btnNext);
+        btnExit = findViewById(R.id.btnLogout);
 
         // Initialize Firebase authentication
         auth = FirebaseAuth.getInstance();
 
-        // Set click listeners for buttons
-        btnExit.setOnClickListener(this::goToRegister);
+
         bUroom.setOnClickListener(this::goRoomusers);
         btnStorage.setOnClickListener(this::dowloadPhotoTithFireBase);
         bCreateOrder.setOnClickListener(this::MoveOrderByPlants);
         bSearchRecycle.setOnClickListener(this::GotoSearchList);
         bAnswearCv.setOnClickListener(this::GoToAnswearWithImage);
-        searchView.setOnClickListener(this::ToastSearchView);
+        btnGoPlat.setOnClickListener(this::goToPlatsActivitiCrudOperations);
         btnDb.setOnClickListener(this::GotoDbInfo);
+        btnNext.setOnClickListener(this::goTOSeconMeny);
+        btnExit.setOnClickListener(this::goToRegister);
+    }
+
+    private void goTOSeconMeny(View view) {
+        Toast.makeText(this, "Move", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MenuActivity.this, MenuSecondRows.class);
+        startActivity(intent);
+
     }
 
     private void GotoDbInfo(View view) {
-        Toast.makeText(this, "Go to Db Info", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MenuActivity.this, InfoFromDb.class);
+        Toast.makeText(this, "GoInfo", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MenuActivity.this, infoMenu.class);
         startActivity(intent);
     }
 
     // Method to display a toast message when the search view is clicked
-    private void ToastSearchView(View view) {
-        Toast.makeText(this, "It will be", Toast.LENGTH_SHORT).show();
+    private void goToPlatsActivitiCrudOperations(View view) {
+        Toast.makeText(this, "move plantsActivity ", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MenuActivity.this, TestPlants.class);
+        startActivity(intent);
     }
 
     // Method to navigate to RecycleSearchActivity

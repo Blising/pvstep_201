@@ -13,17 +13,18 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/logoImage"
-        android:layout_width="329dp"
-        android:layout_height="249dp"
-        android:backgroundTint="#868D99"
+        android:layout_width="288dp"
+        android:layout_height="300dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="116dp"
-
+        android:backgroundTint="#868D99"
         android:textAlignment="center"
+        app:shapeAppearanceOverlay="@style/RoundedImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoobtack" />
+        app:srcCompat="@drawable/logodesign" />
+
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -46,24 +47,26 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/singIn"
-        android:layout_width="308dp"
-        android:layout_height="60dp"
+        android:layout_width="390dp"
+        android:layout_height="70dp"
         android:layout_marginTop="116dp"
         android:layout_marginBottom="16dp"
+        android:background="#EBB92F"
+        android:backgroundTint="#938D8D"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/btnLogout"
         app:layout_constraintEnd_toEndOf="@+id/logoImage"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="@+id/logoImage"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogout"
-        android:layout_width="305dp"
-        android:layout_height="58dp"
+        android:layout_width="390dp"
+        android:layout_height="70dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/btn3"
-        android:text="Logout"
+        android:text="Enter"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/singIn"
@@ -99,17 +102,18 @@
     <!-- None Account View -->
     <TextView
         android:id="@+id/NoneAccountView"
-        android:layout_width="234dp"
-        android:layout_height="35dp"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
         android:text="Немає облікового запису ?"
         android:textAlignment="center"
         android:textColor="#1E1E1E"
-        android:textSize="15sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnLogout"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="@+id/btnLogout"
         app:layout_constraintTop_toBottomOf="@+id/btnLogout"
-        app:layout_constraintVertical_bias="0.698" />
+        app:layout_constraintVertical_bias="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

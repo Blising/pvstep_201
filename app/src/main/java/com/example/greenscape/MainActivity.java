@@ -5,10 +5,14 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,6 +37,7 @@ import com.google.firebase.auth.GoogleAuthProvider;// Провайдер авт�
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+
     FirebaseAuth auth;// Об'єкт аутентифікації Firebase
     GoogleSignInClient googleSignInClient;// Клієнт входу Google
     ShapeableImageView imageView;// Зображення користувача
@@ -90,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
         mail = findViewById(R.id.mailTV);// Електронна пошта користувача
         bLogout = findViewById(R.id.btnLogout); // Кнопка виходу
         NoneAccountView.setOnClickListener(this::ToastNoneAccount);
+
+
         bLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
     private void ToastNoneAccount(View view) {
         Toast.makeText(MainActivity.this,"Push Sigin", Toast.LENGTH_SHORT).show();
     }
+
+
 
 
 }

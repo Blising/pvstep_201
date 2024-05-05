@@ -1,7 +1,17 @@
 
 <resources>
-<style name="roundedImageView"  parent="Theme.AppCompat.Light.DarkActionBar">
+<style name="roundedImageView"  parent="Theme.Material3.DayNight">
     <item name="cornerFamily">rounded</item>
     <item name="cornerSize">50%</item>
+
 </style>
+    <style name="DialogAnimation">new</style>
+
+    <style name="RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- Adjust the cornerSize as needed -->
+    </style>
+
 </resources>
+
+

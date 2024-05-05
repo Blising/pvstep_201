@@ -1,0 +1,24 @@
+<!-- item_car.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TWid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: " />
+
+    <TextView
+        android:id="@+id/TWname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="discription: " />
+
+
+    <!-- Додайте інші представлення для відображення інших полів автомобіля -->
+
+</LinearLayout>
+
+

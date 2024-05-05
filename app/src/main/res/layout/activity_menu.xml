@@ -9,11 +9,15 @@
     tools:context=".MenuActivity">
     <!-- Перший ряд -->
     <!-- Пошукова строка -->
-    <SearchView
-        android:id="@+id/searchForMeny"
+
+
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
+        android:id="@+id/plantsCrud"
+
+        android:text="plantsList"
         android:layout_marginTop="16dp"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -22,7 +26,9 @@
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:queryHint="Введіть текст для пошуку" />
+        app:queryHint="Введіть текст для пошуку"
+     />
+
 
     <!-- Перший ряд -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,16 +39,16 @@
         android:paddingTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchForMeny">
+        app:layout_constraintTop_toBottomOf="@id/plantsCrud">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bUsersRoom"
             android:layout_width="207dp"
             android:layout_height="181dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/logoobtack"
+            android:background="@drawable/contact"
             android:gravity="bottom|center_horizontal"
-            android:text="roomusers"
+            android:text="rooms"
             android:textColor="#0E0501"
             android:textSize="20sp"
             app:cornerRadius="24dp"
@@ -57,11 +63,11 @@
             android:layout_width="207dp"
             android:layout_height="181dp"
             android:layout_marginStart="8dp"
-            android:background="@drawable/logoobtack"
+            android:background="@drawable/ai"
             android:gravity="bottom|center_horizontal"
             android:text="AiImage"
-            android:textColor="#0E0501"
-            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="@+id/bUsersRoom"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/bUsersRoom"
@@ -88,7 +94,7 @@
             android:layout_height="181dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/logoobtack"
+            android:background="@drawable/upload"
             android:gravity="bottom|center_horizontal"
             android:text="UploadImage"
             android:textColor="#0E0501"
@@ -97,14 +103,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/bCreateOrder"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bCreateOrder"
             android:layout_width="207dp"
             android:layout_height="181dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/logoobtack"
+            android:background="@drawable/order"
             android:gravity="bottom|center_horizontal"
             android:text="Order"
             android:textColor="#0E0501"
@@ -131,7 +138,7 @@
             android:layout_height="181dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/logoobtack"
+            android:background="@drawable/s"
             android:gravity="bottom|center_horizontal"
             android:text="searchView"
             android:textColor="#0E0501"
@@ -147,10 +154,9 @@
             android:layout_width="207dp"
             android:layout_height="181dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/logoobtack"
+            android:background="@drawable/opop"
             android:gravity="bottom|left"
-            android:text="Go db ingo
-"
+            android:text="Info-Menu"
             android:textColor="#0E0501"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -161,20 +167,39 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Кнопка виходу -->
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLogout"
-        android:layout_width="250dp"
-        android:layout_height="72dp"
-
-        android:background="@drawable/btn3"
-        android:text="exit"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/theertRow" />
+        app:layout_constraintTop_toBottomOf="@id/theertRow">
+
+        <!-- Exit Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn3"
+            android:text="Exit"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="23sp" />
+
+        <!-- Next Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn3"
+            android:text="Next"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="23sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,7 +33,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/twoRow"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/tuda" />
+            app:srcCompat="@drawable/io" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -4,11 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
-
-
-
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -19,8 +15,21 @@
         android:theme="@style/Theme.GreenScape"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
-            android:name=".InfoFromDb"
+            android:name=".AddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DbFirebaseMain"
+            android:exported="false" />
+        <activity
+            android:name=".MenuSecondRows"
+            android:exported="false" />
+        <activity
+            android:name=".TestPlants"
+            android:exported="false" />
+        <activity
+            android:name=".infoMenu"
             android:exported="false" />
         <activity
             android:name=".RecycleSearchActivity"
@@ -48,6 +57,9 @@
             android:exported="false" />
         <activity
             android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeFragment"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
