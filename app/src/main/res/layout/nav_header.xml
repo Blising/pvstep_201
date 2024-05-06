@@ -6,27 +6,30 @@
     android:layout_height="176dp"
     android:gravity="bottom"
     android:padding="16dp"
-    android:background="@drawable/headerbkg"
+    android:background="@drawable/bacground_splashescreen"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
         android:layout_width="94dp"
         android:layout_height="57dp"
+
+
         android:src="@drawable/avka" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Android Knowledge"
-        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textColor="@color/black"
         android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="contact@androidknowledge.com"
-        android:textColor="@color/white"
-        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:layout_marginBottom="16dp"/>
 
 </LinearLayout>

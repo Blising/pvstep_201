@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Add new Record"
+        android:text="Add new Plants"
         android:background="@color/teal_200"
         android:gravity="center"
         android:textSize="25dp"
@@ -41,7 +41,7 @@
         android:textSize="20sp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
-        android:text="Course"
+        android:text="Type"
         />
     <EditText
         android:layout_width="match_parent"
@@ -92,14 +92,16 @@
         android:gravity="center"
         android:id="@+id/txtImageUrl"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
+
         android:layout_marginRight="25dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/btn4"
+        android:textColor="@color/white"
         android:gravity="center"
         android:text="Save"
         android:textAllCaps="false"

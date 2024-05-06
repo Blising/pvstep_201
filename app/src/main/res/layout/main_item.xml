@@ -64,19 +64,26 @@
             android:layout_below="@+id/emailtext"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnEdit"
                 android:layout_width="173dp"
+
+                android:background="@drawable/btn3"
+                android:textColor="@color/white"
+                android:textSize="15sp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:text="Edit"
                 android:textAllCaps="false" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDelete"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:background="@drawable/btn3"
                 android:text="Delete"
                 android:textAllCaps="false" />
 

@@ -111,7 +111,7 @@
             android:layout_width="207dp"
             android:layout_height="181dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/order"
+            android:background="@drawable/map"
             android:gravity="bottom|center_horizontal"
             android:text="Order"
             android:textColor="#0E0501"

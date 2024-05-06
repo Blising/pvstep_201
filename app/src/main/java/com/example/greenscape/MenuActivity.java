@@ -19,6 +19,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button bUroom;
     private Button bSearchRecycle;
     private Button bAnswearCv;
+    private Button btnSomfingElse;
     private Button btnNext;
 
     private Button btnExit;
@@ -48,6 +49,7 @@ public class MenuActivity extends AppCompatActivity {
         btnNext =  findViewById(R.id.btnNext);
         btnExit = findViewById(R.id.btnLogout);
 
+
         // Initialize Firebase authentication
         auth = FirebaseAuth.getInstance();
 
@@ -58,7 +60,10 @@ public class MenuActivity extends AppCompatActivity {
         bSearchRecycle.setOnClickListener(this::GotoSearchList);
         bAnswearCv.setOnClickListener(this::GoToAnswearWithImage);
         btnGoPlat.setOnClickListener(this::goToPlatsActivitiCrudOperations);
+
         btnDb.setOnClickListener(this::GotoDbInfo);
+
+
         btnNext.setOnClickListener(this::goTOSeconMeny);
         btnExit.setOnClickListener(this::goToRegister);
     }
