@@ -85,7 +85,7 @@ public class MenuActivity extends AppCompatActivity {
 
     // Method to navigate to RecycleSearchActivity
     private void GotoSearchList(View view) {
-        Intent intent = new Intent(MenuActivity.this, RecycleSearchActivity.class);
+        Intent intent = new Intent(MenuActivity.this, DbFirebaseMain.class);
         startActivity(intent);
     }
 

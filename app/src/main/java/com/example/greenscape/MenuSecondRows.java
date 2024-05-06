@@ -16,6 +16,7 @@ public class MenuSecondRows extends AppCompatActivity {
     private Button btnExit;
 
     private Button btnDb;
+    private Button btnSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,21 @@ public class MenuSecondRows extends AppCompatActivity {
         btnNext =  findViewById(R.id.btnNext);
         btnExit = findViewById(R.id.btnLogout);
         btnDb = findViewById(R.id.imageView1);
+        btnSearch = findViewById(R.id.btnSeach);
+
+
 
 
         btnNext.setOnClickListener(this::goTOSeconMeny);
         btnExit.setOnClickListener(this::goToRegister);
         btnDb.setOnClickListener(this::gotoDbPage);
+        btnSearch.setOnClickListener(this::gotoSearch);
+
+    }
+
+    private void gotoSearch(View view) {
+        Intent intent = new Intent(MenuSecondRows.this, RecycleSearchActivity.class);
+        startActivity(intent);
 
     }
 
