@@ -20,10 +20,12 @@ public class MenuActivity extends AppCompatActivity {
     private Button bSearchRecycle;
     private Button bAnswearCv;
     private Button btnSomfingElse;
-    private Button btnNext;
+
 
     private Button btnExit;
     private Button btnStorage;
+    private  Button btnLogoutFireBase;
+
     private Button bCreateOrder;
     private Button btnDb;
     private Button btnGoPlat;
@@ -37,6 +39,8 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu); // Set the layout file for this activity
 
+        btnLogoutFireBase = findViewById(R.id.btnLogoutFireBase);
+
         // Initialize UI components
         bUroom = findViewById(R.id.bUsersRoom);
         btnExit = findViewById(R.id.btnLogout);
@@ -46,7 +50,7 @@ public class MenuActivity extends AppCompatActivity {
         bAnswearCv = findViewById(R.id.imageAi);
         btnGoPlat = findViewById(R.id.plantsCrud);
         btnDb = findViewById(R.id.btnSomfingElse);
-        btnNext =  findViewById(R.id.btnNext);
+
         btnExit = findViewById(R.id.btnLogout);
 
 
@@ -64,16 +68,20 @@ public class MenuActivity extends AppCompatActivity {
         btnDb.setOnClickListener(this::GotoDbInfo);
 
 
-        btnNext.setOnClickListener(this::goTOSeconMeny);
+
         btnExit.setOnClickListener(this::goToRegister);
+        btnLogoutFireBase.setOnClickListener(this::logoutFirebase);
     }
 
-    private void goTOSeconMeny(View view) {
-        Toast.makeText(this, "Move", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MenuActivity.this, MenuSecondRows.class);
-        startActivity(intent);
+    private void logoutFirebase(View view) {
+        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
+
+        Toast.makeText(this,"Logout: "+ email , Toast.LENGTH_SHORT).show();
+
+        FirebaseAuth.getInstance().signOut();
     }
+
 
     private void GotoDbInfo(View view) {
         Toast.makeText(this, "GoInfo", Toast.LENGTH_SHORT).show();
@@ -84,7 +92,7 @@ public class MenuActivity extends AppCompatActivity {
     // Method to display a toast message when the search view is clicked
     private void goToPlatsActivitiCrudOperations(View view) {
         Toast.makeText(this, "move plantsActivity ", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MenuActivity.this, TestPlants.class);
+        Intent intent = new Intent(MenuActivity.this, RecycleSearchActivity.class);
         startActivity(intent);
     }
 
@@ -114,7 +122,7 @@ public class MenuActivity extends AppCompatActivity {
 
     // Method to navigate to MainActivity
     private void goToRegister(View view) {
-        Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+        Intent intent = new Intent(MenuActivity.this, ImageAnswear.class);
         startActivity(intent);
     }
 
@@ -132,7 +140,7 @@ public class MenuActivity extends AppCompatActivity {
             intent.putExtra("email", email);
             startActivity(intent);
         } else {
-            Toast.makeText(this, "You need Authentication", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Something wrong Authentication: ", Toast.LENGTH_SHORT).show();
         }
     }
 }

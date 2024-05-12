@@ -5,36 +5,33 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2D2D2"
+
     tools:context=".MenuActivity">
-    <!-- Перший ряд -->
-    <!-- Пошукова строка -->
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
         android:id="@+id/plantsCrud"
+        android:layout_width="277dp"
+        android:layout_height="42dp"
 
-        android:text="plantsList"
+
         android:layout_marginTop="16dp"
+
+
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btn4"
+        android:text="plantsList"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/firstRow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:queryHint="Введіть текст для пошуку"
-     />
+        app:queryHint="Введіть текст для пошуку" />
 
-
-    <!-- Перший ряд -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/firstRow"
-        android:layout_width="411dp"
-        android:layout_height="196dp"
+        android:layout_width="600dp"
+        android:layout_height="300dp"
         android:layout_marginTop="16dp"
         android:paddingTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,8 +40,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bUsersRoom"
-            android:layout_width="207dp"
-            android:layout_height="181dp"
+            android:layout_width="294dp"
+            android:layout_height="286dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/contact"
             android:gravity="bottom|center_horizontal"
@@ -56,12 +53,12 @@
             app:layout_constraintEnd_toStartOf="@+id/imageAi"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.444" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/imageAi"
-            android:layout_width="207dp"
-            android:layout_height="181dp"
+            android:layout_width="285dp"
+            android:layout_height="293dp"
             android:layout_marginStart="8dp"
             android:background="@drawable/ai"
             android:gravity="bottom|center_horizontal"
@@ -81,8 +78,8 @@
     <!-- Третій ряд -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/secondRow"
-        android:layout_width="411dp"
-        android:layout_height="196dp"
+        android:layout_width="600dp"
+        android:layout_height="300dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,8 +87,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnStorage"
-            android:layout_width="207dp"
-            android:layout_height="181dp"
+            android:layout_width="250dp"
+            android:layout_height="269dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/upload"
@@ -104,12 +101,12 @@
             app:layout_constraintEnd_toStartOf="@+id/bCreateOrder"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.533" />
+            app:layout_constraintVertical_bias="0.336" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bCreateOrder"
-            android:layout_width="207dp"
-            android:layout_height="181dp"
+            android:layout_width="282dp"
+            android:layout_height="275dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/map"
             android:gravity="bottom|center_horizontal"
@@ -119,23 +116,26 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnStorage"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.134" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/theertRow"
-        android:layout_width="411dp"
-        android:layout_height="196dp"
+        android:layout_width="600dp"
+        android:layout_height="300dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/secondRow">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/searchView"
-            android:layout_width="207dp"
-            android:layout_height="181dp"
+            android:layout_width="244dp"
+            android:layout_height="283dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/r"
@@ -147,12 +147,12 @@
             app:layout_constraintEnd_toStartOf="@+id/btnSomfingElse"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.058" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSomfingElse"
-            android:layout_width="207dp"
-            android:layout_height="181dp"
+            android:layout_width="257dp"
+            android:layout_height="295dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/opop"
             android:gravity="bottom|left"
@@ -163,43 +163,35 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/searchView"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Кнопка виходу -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogout"
+        android:layout_width="104dp"
+        android:layout_height="68dp"
+        android:layout_below="@+id/theertRow"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/scan2"
+        android:gravity="center"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/theertRow">
+        app:layout_constraintTop_toBottomOf="@+id/theertRow" />
 
-        <!-- Exit Button -->
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnLogout"
-            android:layout_width="0dp"
-            android:layout_height="72dp"
-            android:layout_weight="1"
-            android:background="@drawable/btn3"
-            android:text="Exit"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="23sp" />
-
-        <!-- Next Button -->
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnNext"
-            android:layout_width="0dp"
-            android:layout_height="72dp"
-            android:layout_weight="1"
-            android:background="@drawable/btn3"
-            android:text="Next"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="23sp" />
-    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogoutFireBase"
+        android:layout_width="120dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/baseline_logout_firebase"
+        app:layout_constraintBottom_toTopOf="@+id/firstRow"
+        app:layout_constraintEnd_toStartOf="@+id/plantsCrud"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

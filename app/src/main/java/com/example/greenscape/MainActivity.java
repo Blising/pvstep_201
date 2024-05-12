@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+
 
                                 auth = FirebaseAuth.getInstance();
                                 Glide.with(MainActivity.this).load(Objects.requireNonNull(auth.getCurrentUser()).getPhotoUrl()).into(imageView);
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                                 finish(); // Опціонально, для закриття поточної активності
 
 
-                                Toast.makeText(MainActivity.this, "Sing in Succsesfully ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Welcom: " + email, Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(MainActivity.this, "Failed Sing in  " + task.getException(), Toast.LENGTH_SHORT).show();
                             }

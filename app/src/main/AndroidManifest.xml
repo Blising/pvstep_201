@@ -15,7 +15,15 @@
         android:theme="@style/Theme.GreenScape"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ResultsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".item_scan_result"
+            android:exported="false" />
+        <activity
+            android:name=".MenuFixed"
+            android:exported="false" />
         <activity
             android:name=".AddActivity"
             android:exported="false" />

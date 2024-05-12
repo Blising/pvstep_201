@@ -20,8 +20,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_gallery"
-            android:layout_width="200dp"
-            android:layout_height="272dp"
+            android:layout_width="197dp"
+            android:layout_height="274dp"
 
 
             android:background="@drawable/uploadchoise"
@@ -37,7 +37,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.415" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_camera"
@@ -51,10 +51,10 @@
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.024"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.396" />
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,37 +63,70 @@
         android:layout_height="295dp"
         android:paddingTop="10sp"
 
-        app:layout_constraintBottom_toTopOf="@+id/tvResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstRow">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="406dp"
-            android:layout_height="259dp"
+            android:layout_width="405dp"
+            android:layout_height="251dp"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
             android:src="@drawable/tuda"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.384" />
+            app:layout_constraintVertical_bias="0.176" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tvResult"
-        android:layout_width="387dp"
-        android:layout_height="98dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="471dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/btn4"
         android:padding="8dp"
         android:text=""
+        android:textAlignment="center"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twooRow" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="343dp"
+        android:layout_height="52dp"
+        android:background="#A9A90C"
+        android:text="Результат:"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twooRow"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <ImageButton
+        android:id="@+id/viewResultsButton"
+        android:layout_width="87dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="32dp"
+        android:background="#A87713"
+        app:layout_constraintBottom_toTopOf="@+id/tvResult"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twooRow"
+        app:srcCompat="@drawable/ic_baseline_subscriptions_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

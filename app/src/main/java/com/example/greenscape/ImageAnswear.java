@@ -4,26 +4,38 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.example.greenscape.R;
+import com.example.greenscape.ResultsActivity;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.mlkit.vision.label.ImageLabel;
 import com.google.mlkit.vision.label.ImageLabeler;
 import com.google.mlkit.vision.label.ImageLabeling;
 import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 
 public class ImageAnswear extends AppCompatActivity {
@@ -33,6 +45,10 @@ public class ImageAnswear extends AppCompatActivity {
     private ImageView imageView;
     private TextView tvResult;
 
+
+    private ImageButton viewResultsButton;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +57,18 @@ public class ImageAnswear extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 101);
         }
+        viewResultsButton = findViewById(R.id.viewResultsButton);
 
         imageView = findViewById(R.id.imageView);
         tvResult = findViewById(R.id.tvResult);
+
+        viewResultsButton.setOnClickListener(this::gotoResult);
+    }
+
+    private void gotoResult(View view) {
+        Intent intent = new Intent(this, ResultsActivity.class);
+        startActivity(intent);
+
     }
 
     // Метод для вибору фото з галереї
@@ -90,32 +115,43 @@ public class ImageAnswear extends AppCompatActivity {
         }
     }
 
+
     // Метод для сканування зображення та отримання міток
     private void labelImage(Bitmap bitmap) {
-        // Створення ImageLabeler
         ImageLabeler labeler = ImageLabeling.getClient(ImageLabelerOptions.DEFAULT_OPTIONS);
-
-        // Створення InputImage з Bitmap
         com.google.mlkit.vision.common.InputImage image = com.google.mlkit.vision.common.InputImage.fromBitmap(bitmap, 0);
 
-        // Виконання сканування
         labeler.process(image)
                 .addOnSuccessListener(imageLabels -> {
-                    // Отримання результатів сканування
                     StringBuilder result = new StringBuilder();
                     for (ImageLabel label : imageLabels) {
                         String text = label.getText();
                         float confidence = label.getConfidence();
                         result.append(text).append(": ").append(confidence).append("\n");
                     }
-                    // Виведення результатів
                     tvResult.setText(result.toString());
+                    saveLabelsToFirebase(imageLabels);
                     Toast.makeText(ImageAnswear.this, "Фото скановано", Toast.LENGTH_SHORT).show();
                 })
                 .addOnFailureListener(e -> {
-                    // Обробка помилки
                     Toast.makeText(ImageAnswear.this, "Помилка сканування: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
-}
+    private void saveLabelsToFirebase(List<ImageLabel> imageLabels) {
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("scan_table_results");
 
+        for (ImageLabel label : imageLabels) {
+            String text = label.getText();
+            float confidence = label.getConfidence();
+
+            // Зберігаємо мітку та її рівень впевненості у базі даних
+            databaseReference.push().setValue(text + ": " + confidence)
+                    .addOnSuccessListener(aVoid -> {
+                        Toast.makeText(getApplicationContext(), "Results uploaded successfully", Toast.LENGTH_SHORT).show();
+                    })
+                    .addOnFailureListener(e -> {
+                        Toast.makeText(getApplicationContext(), "Failed to upload results", Toast.LENGTH_SHORT).show();
+                    });
+        }
+    }
+}
