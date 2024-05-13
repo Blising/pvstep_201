@@ -8,10 +8,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/resultsRecyclerView"
-        android:layout_width="401dp"
-        android:layout_height="583dp"
+        android:layout_width="match_parent"
+        android:layout_height="645dp"
+        android:layout_below="@+id/imageView9"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp" />
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="-63dp" />
 
     <ImageView
         android:background="#637F44"
@@ -26,12 +28,14 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="248dp"
-        android:layout_height="69dp"
-        android:layout_above="@+id/resultsRecyclerView"
+        android:layout_width="237dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="9dp"
         app:srcCompat="@drawable/headerrrrr" />
 
 </RelativeLayout>
