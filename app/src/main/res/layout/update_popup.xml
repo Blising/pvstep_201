@@ -9,13 +9,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Update Details Plants"
-        android:background="@color/teal_200"
+        android:background="#637F44"
         android:gravity="center"
-        android:textSize="25dp"
+        android:text="Update Details Plants"
         android:textColor="#FFF"
-        />
+        android:textSize="25dp" />
+
     <TextView
+        android:textColor="#8FBA4B"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -35,6 +36,7 @@
 
 
     <TextView
+        android:textColor="#8FBA4B"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -54,6 +56,7 @@
 
 
     <TextView
+        android:textColor="#8FBA4B"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -73,6 +76,7 @@
 
 
     <TextView
+        android:textColor="#8FBA4B"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -95,9 +99,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
+        android:backgroundTint="#8FBA4B"
         android:layout_marginTop="10dp"
         android:layout_marginRight="25dp"
-
         android:background="@drawable/btn4"
         android:textColor="@color/white"
         android:gravity="center"

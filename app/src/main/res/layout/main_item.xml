@@ -69,6 +69,7 @@
                 android:layout_width="173dp"
 
                 android:background="@drawable/btn3"
+                android:backgroundTint="#8FBA4B"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:layout_height="wrap_content"
@@ -78,6 +79,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDelete"
+                android:backgroundTint="#8FBA4B"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"

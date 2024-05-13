@@ -8,9 +8,11 @@
         android:id="@+id/TWid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name: " />
+        android:text="Name: "
+        android:textColor="#8FBA4B"/>
 
     <TextView
+        android:textColor="#8FBA4B"
         android:id="@+id/TWname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

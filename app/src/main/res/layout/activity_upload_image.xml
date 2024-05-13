@@ -8,17 +8,18 @@
     android:padding="16dp"
     tools:context=".UploadImage">
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_choose_image"
         android:layout_width="174dp"
         android:layout_height="65dp"
-        android:background="@drawable/btn3"
-        android:textColor="@color/white"
         android:layout_marginStart="-4dp"
-        android:text="CHOOSE FILE"
+        android:background="@drawable/btn3"
+        android:backgroundTint="#8FBA4B"
+        android:text="Add Plants"
+        android:textColor="@color/white"
 
         />
-
 
     <EditText
         android:id="@+id/edit_text_file_name"
@@ -29,13 +30,14 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
-        android:textColorHint="@color/white"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="6dp"
         android:layout_toEndOf="@id/button_choose_image"
-        android:hint="Enter file name"
+        android:hint="NAME"
+        android:textColor="#637F44"
         android:textAlignment="center"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        android:textColorHint="#637F44" />
 
     <ImageView
         android:id="@+id/image_view"
@@ -71,6 +73,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="15dp"
         android:background="@drawable/btn3"
+        android:backgroundTint="#8FBA4B"
         android:text="Upload" />
 
     <TextView
@@ -81,15 +84,16 @@
         android:layout_alignEnd="@+id/button_upload"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="29dp"
+        android:textColor="#637F44"
         android:layout_marginTop="10dp"
-        android:textColorHint="@color/white"
-
         android:layout_marginEnd="-178dp"
+
         android:layout_marginBottom="27dp"
         android:layout_toEndOf="@id/button_upload"
-        android:text="Show Upload"
+        android:text="Show Plants"
         android:textAlignment="center"
         android:textAllCaps="true"
+        android:textColorHint="@color/white"
         android:textSize="20sp" />
 
 

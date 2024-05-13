@@ -10,12 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Add new Plants"
-        android:background="@color/teal_200"
+        android:background="#637F44"
         android:gravity="center"
         android:textSize="25dp"
         android:textColor="#FFF"
         />
     <TextView
+        android:textColor="#637F44"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -39,6 +40,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="20sp"
+        android:textColor="#637F44"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:text="Type"
@@ -59,6 +61,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:gravity="center"
+        android:textColor="#637F44"
         android:text="description"
         android:textSize="20sp" />
     <EditText
@@ -77,6 +80,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="20sp"
+        android:textColor="#637F44"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:text="Image Url"
@@ -102,12 +106,13 @@
         android:textColor="@color/white"
         android:gravity="center"
         android:text="Save"
+        android:backgroundTint="#8FBA4B  "
         android:textAllCaps="false"
         android:textSize="21dp" />
     <Button
         android:id="@+id/btnBack"
         android:layout_width="280dp"
-        android:backgroundTint="#28B2AC"
+        android:backgroundTint="#8FBA4B  "
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"

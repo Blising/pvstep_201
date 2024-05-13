@@ -9,34 +9,14 @@
     tools:context=".MenuActivity">
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/plantsCrud"
-        android:layout_width="277dp"
-        android:layout_height="42dp"
-
-
-        android:layout_marginTop="16dp"
-
-
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btn4"
-        android:text="plantsList"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/firstRow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:queryHint="Введіть текст для пошуку" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/firstRow"
-        android:layout_width="600dp"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="16dp"
         android:paddingTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/plantsCrud">
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bUsersRoom"
@@ -53,7 +33,7 @@
             app:layout_constraintEnd_toStartOf="@+id/imageAi"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/imageAi"
@@ -78,7 +58,7 @@
     <!-- Третій ряд -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/secondRow"
-        android:layout_width="600dp"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,27 +88,27 @@
             android:layout_width="282dp"
             android:layout_height="275dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/map"
+            android:background="@drawable/storeeeee"
             android:gravity="bottom|center_horizontal"
-            android:text="Order"
+
             android:textColor="#0E0501"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnStorage"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.134" />
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/theertRow"
-        android:layout_width="600dp"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/secondRow">
 
@@ -138,9 +118,9 @@
             android:layout_height="283dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/r"
+            android:background="@drawable/myplantssss"
             android:gravity="bottom|center_horizontal"
-            android:text="Data"
+
             android:textColor="#0E0501"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -154,9 +134,9 @@
             android:layout_width="257dp"
             android:layout_height="295dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/opop"
+            android:background="@drawable/librarrryyy"
             android:gravity="bottom|left"
-            android:text="Info-Menu"
+
             android:textColor="#0E0501"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -168,30 +148,50 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogout"
-        android:layout_width="104dp"
-        android:layout_height="68dp"
+        android:layout_width="137dp"
+        android:layout_height="102dp"
         android:layout_below="@+id/theertRow"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="@drawable/scan2"
+        android:background="@drawable/greenscannn"
         android:gravity="center"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/theertRow" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogoutFireBase"
-        android:layout_width="120dp"
-        android:layout_height="76dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/baseline_logout_firebase"
-        app:layout_constraintBottom_toTopOf="@+id/firstRow"
-        app:layout_constraintEnd_toStartOf="@+id/plantsCrud"
-        app:layout_constraintHorizontal_bias="0.139"
+        android:layout_width="86dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="28dp"
+        android:background="@drawable/logout25"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.368" />
+
+    <ImageView
+        android:layout_marginBottom="200dp"
+        android:id="@+id/imageView6"
+        android:layout_width="853dp"
+        android:layout_height="80dp"
+        android:background="#637F44"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="383dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/headerrrrr" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

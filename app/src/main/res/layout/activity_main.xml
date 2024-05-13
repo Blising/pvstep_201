@@ -17,13 +17,14 @@
         android:layout_height="300dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="116dp"
-        android:backgroundTint="#868D99"
+        android:backgroundTint="#FEFEFE"
         android:textAlignment="center"
+
         app:shapeAppearanceOverlay="@style/RoundedImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logodesign" />
+        app:srcCompat="@drawable/lllogoo" />
 
 
     <RelativeLayout
@@ -49,15 +50,16 @@
         android:id="@+id/singIn"
         android:layout_width="390dp"
         android:layout_height="70dp"
+        android:clickable="false"
         android:layout_marginTop="116dp"
         android:layout_marginBottom="16dp"
-        android:background="#EBB92F"
-        android:backgroundTint="#938D8D"
+        android:background="#8FBA4B"
+
+        android:backgroundTint="#8FBA4B"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/btnLogout"
-        app:layout_constraintEnd_toEndOf="@+id/logoImage"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="@+id/logoImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -66,9 +68,11 @@
         android:layout_height="70dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/btn3"
-        android:text="Enter"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:backgroundTint="#FEFEFE"
+        android:text="Вхід"
+        android:clickable="true"
+        android:textColor="#6A765D"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="@+id/singIn"
         app:layout_constraintStart_toStartOf="@+id/singIn"
         app:layout_constraintTop_toBottomOf="@+id/singIn" />
@@ -88,6 +92,8 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <!-- Placeholder for Email -->
+
+    <!-- None Account View -->
     <TextView
         android:id="@+id/mailTV"
         android:layout_width="wrap_content"
@@ -96,24 +102,26 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+        app:layout_constraintTop_toBottomOf="@+id/nameTV"
+        app:layout_constraintVertical_bias="0.497" />
 
-    <!-- None Account View -->
     <TextView
         android:id="@+id/NoneAccountView"
         android:layout_width="400dp"
         android:layout_height="55dp"
         android:text="Немає облікового запису ?"
         android:textAlignment="center"
-        android:textColor="#1E1E1E"
+        android:textColor="#708C55"
         android:textSize="25sp"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnLogout"
-        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btnLogout"
         app:layout_constraintTop_toBottomOf="@+id/btnLogout"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.081" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.866"
-        android:backgroundTint="#1BB491"
+        android:backgroundTint="#8FBA4B"
 
         app:srcCompat="@drawable/add_new" />
 

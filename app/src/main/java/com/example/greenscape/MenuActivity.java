@@ -19,7 +19,6 @@ public class MenuActivity extends AppCompatActivity {
     private Button bUroom;
     private Button bSearchRecycle;
     private Button bAnswearCv;
-    private Button btnSomfingElse;
 
 
     private Button btnExit;
@@ -28,7 +27,6 @@ public class MenuActivity extends AppCompatActivity {
 
     private Button bCreateOrder;
     private Button btnDb;
-    private Button btnGoPlat;
 
     // Firebase authentication
     private FirebaseAuth auth;
@@ -48,7 +46,7 @@ public class MenuActivity extends AppCompatActivity {
         bCreateOrder= findViewById(R.id.bCreateOrder);
         bSearchRecycle  = findViewById(R.id.searchView);
         bAnswearCv = findViewById(R.id.imageAi);
-        btnGoPlat = findViewById(R.id.plantsCrud);
+
         btnDb = findViewById(R.id.btnSomfingElse);
 
         btnExit = findViewById(R.id.btnLogout);
@@ -63,9 +61,8 @@ public class MenuActivity extends AppCompatActivity {
         bCreateOrder.setOnClickListener(this::MoveOrderByPlants);
         bSearchRecycle.setOnClickListener(this::GotoSearchList);
         bAnswearCv.setOnClickListener(this::GoToAnswearWithImage);
-        btnGoPlat.setOnClickListener(this::goToPlatsActivitiCrudOperations);
 
-        btnDb.setOnClickListener(this::GotoDbInfo);
+        btnDb.setOnClickListener(this::GotoLibrary);
 
 
 
@@ -83,18 +80,14 @@ public class MenuActivity extends AppCompatActivity {
     }
 
 
-    private void GotoDbInfo(View view) {
-        Toast.makeText(this, "GoInfo", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MenuActivity.this, infoMenu.class);
+    private void GotoLibrary(View view) {
+        Toast.makeText(this, "Library", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MenuActivity.this,RecycleSearchActivity.class);
         startActivity(intent);
     }
 
     // Method to display a toast message when the search view is clicked
-    private void goToPlatsActivitiCrudOperations(View view) {
-        Toast.makeText(this, "move plantsActivity ", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MenuActivity.this, RecycleSearchActivity.class);
-        startActivity(intent);
-    }
+
 
     // Method to navigate to RecycleSearchActivity
     private void GotoSearchList(View view) {

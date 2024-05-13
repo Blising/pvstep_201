@@ -8,7 +8,30 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/resultsRecyclerView"
+        android:layout_width="401dp"
+        android:layout_height="583dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp" />
+
+    <ImageView
+        android:background="#637F44"
+        android:id="@+id/imageView9"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="69dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="248dp"
+        android:layout_height="69dp"
+        android:layout_above="@+id/resultsRecyclerView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="7dp"
+        app:srcCompat="@drawable/headerrrrr" />
 
 </RelativeLayout>

@@ -40,6 +40,9 @@
         app:layout_constraintTop_toBottomOf="@+id/headerRow">
 
         <TextView
+
+
+
             android:id="@+id/displayNameTextView"
             android:layout_width="279dp"
             android:layout_height="41dp"
@@ -60,6 +63,7 @@
             app:layout_constraintVertical_bias="0.214" />
 
         <TextView
+            android:shadowColor="#637F44"
             android:id="@+id/emailTextView"
             android:layout_width="262dp"
             android:layout_height="41dp"
@@ -67,8 +71,9 @@
             android:layout_centerHorizontal="true"
 
             android:layout_marginTop="4dp"
-            android:shadowColor="#B30A0A"
+
             android:text="Email"
+            android:textColorHint="#637F44"
 
             android:textAlignment="center"
             android:textAllCaps="true"
@@ -89,6 +94,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:background="@drawable/btn3"
+        android:backgroundTint="#8FBA4B"
         android:text="btnExit"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
