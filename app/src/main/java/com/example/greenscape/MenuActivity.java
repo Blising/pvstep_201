@@ -77,6 +77,8 @@ public class MenuActivity extends AppCompatActivity {
         Toast.makeText(this,"Logout: "+ email , Toast.LENGTH_SHORT).show();
 
         FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(MenuActivity.this,MainActivity.class);
+        startActivity(intent);
     }
 
 
