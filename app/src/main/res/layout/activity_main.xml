@@ -48,10 +48,13 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/singIn"
-        android:layout_width="390dp"
-        android:layout_height="70dp"
+
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:clickable="false"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="350dp"
         android:layout_marginBottom="16dp"
         android:background="#8FBA4B"
 
@@ -110,7 +113,9 @@
 
     <TextView
         android:id="@+id/NoneAccountView"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
         android:layout_height="55dp"
         android:text="Немає облікового запису ?"
         android:textAlignment="center"
