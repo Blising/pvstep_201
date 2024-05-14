@@ -23,7 +23,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Name"
+        android:text="Тип"
         />
     <EditText
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Type"
+        android:text="Тривалість життя"
         />
     <EditText
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:text="Description"
+        android:text="Назва рослини"
         android:textSize="20sp" />
     <EditText
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Image Url"
+        android:text="Посилання Url"
         />
     <EditText
         android:layout_width="match_parent"

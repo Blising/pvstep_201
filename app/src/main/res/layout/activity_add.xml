@@ -15,16 +15,17 @@
         android:textSize="25dp"
         android:textColor="#FFF"
         />
+
     <TextView
-        android:textColor="#637F44"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
-        android:text="Name"
-        />
+        android:gravity="center"
+        android:text="Тип"
+        android:textColor="#637F44"
+        android:textSize="20sp" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -43,7 +44,7 @@
         android:textColor="#637F44"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
-        android:text="Type"
+        android:text="Тривалість життя"
         />
     <EditText
         android:layout_width="match_parent"
@@ -62,7 +63,7 @@
         android:layout_marginBottom="15dp"
         android:gravity="center"
         android:textColor="#637F44"
-        android:text="description"
+        android:text="Назва рослини"
         android:textSize="20sp" />
     <EditText
         android:layout_width="match_parent"
@@ -83,7 +84,7 @@
         android:textColor="#637F44"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
-        android:text="Image Url"
+        android:text="Посилання Url"
         />
     <EditText
         android:layout_width="match_parent"
