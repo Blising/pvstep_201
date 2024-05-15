@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2D2D2"
+    android:background="@color/white"
     tools:context=".RoomUsersActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -95,7 +95,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/btn3"
         android:backgroundTint="#8FBA4B"
-        android:text="btnExit"
+        android:text="Exit"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

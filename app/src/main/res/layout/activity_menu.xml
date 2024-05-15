@@ -20,10 +20,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bUsersRoom"
-            android:layout_width="294dp"
-            android:layout_height="286dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/user2"
+            android:layout_width="250dp"
+            android:layout_height="269dp"
+            android:background="@drawable/roomuser2"
             android:gravity="bottom|center_horizontal"
 
             android:textColor="#0E0501"
@@ -37,10 +36,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/imageAi"
-            android:layout_width="285dp"
-            android:layout_height="293dp"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/aiiii"
+            android:layout_width="260dp"
+            android:layout_height="269dp"
+            android:background="@drawable/s1"
             android:gravity="bottom|center_horizontal"
             android:textColor="#000000"
             android:textSize="30sp"
@@ -59,7 +57,7 @@
         android:id="@+id/secondRow"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="8dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/firstRow">
@@ -68,9 +66,7 @@
             android:id="@+id/btnStorage"
             android:layout_width="250dp"
             android:layout_height="269dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/uploadimagee"
+            android:background="@drawable/addph"
             android:gravity="bottom|center_horizontal"
             android:textColor="#0E0501"
             android:textSize="20sp"
@@ -79,13 +75,13 @@
             app:layout_constraintEnd_toStartOf="@+id/bCreateOrder"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.336" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bCreateOrder"
-            android:layout_width="282dp"
-            android:layout_height="275dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="250dp"
+            android:layout_height="269dp"
+
             android:background="@drawable/storeeeee"
             android:gravity="bottom|center_horizontal"
 
@@ -95,7 +91,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnStorage"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -104,7 +100,7 @@
         android:id="@+id/theertRow"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="8dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,10 +108,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/searchView"
-            android:layout_width="244dp"
-            android:layout_height="283dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="250dp"
+            android:layout_height="269dp"
             android:background="@drawable/myplantssss"
             android:gravity="bottom|center_horizontal"
 
@@ -125,13 +119,12 @@
             app:layout_constraintEnd_toStartOf="@+id/btnSomfingElse"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.058" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSomfingElse"
-            android:layout_width="257dp"
-            android:layout_height="295dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="250dp"
+            android:layout_height="269dp"
             android:background="@drawable/librarrryyy"
             android:gravity="bottom|left"
 
@@ -141,7 +134,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/searchView"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -191,5 +184,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/headerrrrr" />
+
+    <ImageView
+        android:id="@+id/IWcalendar"
+        android:layout_width="111dp"
+        android:layout_height="88dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLogout"
+        app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnLogout"
+        app:layout_constraintVertical_bias="0.523"
+        app:srcCompat="@drawable/baseline_calendar_month_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

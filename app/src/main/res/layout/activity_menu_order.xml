@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/main"
     android:backgroundTint="@color/white"
-    android:background="#D2D2D2"
+    android:background="@color/white"
     tools:context=".MenuOrderActivity">
     />
 

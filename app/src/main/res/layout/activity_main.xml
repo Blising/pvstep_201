@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2D2D2"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <!-- Logo Image -->
@@ -19,7 +19,6 @@
         android:layout_marginTop="116dp"
         android:backgroundTint="#FEFEFE"
         android:textAlignment="center"
-
         app:shapeAppearanceOverlay="@style/RoundedImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +72,7 @@
         android:background="@drawable/btn3"
         android:backgroundTint="#FEFEFE"
         android:text="Вхід"
-        android:visibility="invisible"
+        android:visibility="visible"
         android:clickable="true"
         android:textColor="#6A765D"
         android:textSize="25sp"

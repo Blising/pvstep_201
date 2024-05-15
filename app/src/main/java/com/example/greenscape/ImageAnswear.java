@@ -101,19 +101,32 @@ public class ImageAnswear extends AppCompatActivity {
 
             // Сканування фото після зйомки
             labelImage(imageBitmap);
+
+            // Змінюємо видимість елементів після отримання результатів
+            tvResult.setVisibility(View.VISIBLE);
+            findViewById(R.id.textView6).setVisibility(View.VISIBLE);
+            viewResultsButton.setVisibility(View.VISIBLE);
         } else if (requestCode == REQUEST_PICK_IMAGE && resultCode == RESULT_OK) {
             Uri selectedImage = data.getData();
             try {
+                imageView.setVisibility(View.VISIBLE);
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
                 imageView.setImageBitmap(bitmap);
 
                 // Сканування вибраного фото
                 labelImage(bitmap);
+
+                // Змінюємо видимість елементів після отримання результатів
+                tvResult.setVisibility(View.VISIBLE);
+                findViewById(R.id.textView6).setVisibility(View.VISIBLE);
+                viewResultsButton.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.VISIBLE);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
+
 
 
     // Метод для сканування зображення та отримання міток

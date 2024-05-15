@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +28,7 @@ public class MenuActivity extends AppCompatActivity {
 
     private Button bCreateOrder;
     private Button btnDb;
+    private ImageView IWcalendar;
 
     // Firebase authentication
     private FirebaseAuth auth;
@@ -50,6 +52,7 @@ public class MenuActivity extends AppCompatActivity {
         btnDb = findViewById(R.id.btnSomfingElse);
 
         btnExit = findViewById(R.id.btnLogout);
+        IWcalendar =findViewById(R.id.IWcalendar);
 
 
         // Initialize Firebase authentication
@@ -68,6 +71,14 @@ public class MenuActivity extends AppCompatActivity {
 
         btnExit.setOnClickListener(this::goToRegister);
         btnLogoutFireBase.setOnClickListener(this::logoutFirebase);
+        IWcalendar.setOnClickListener(this::gotoCalendarActivity);
+    }
+
+    private void gotoCalendarActivity(View view) {
+        String displayName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+        Toast.makeText(this,"Calendar: "+displayName,Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MenuActivity.this,CalendatActivity.class);
+        startActivity(intent);
     }
 
     private void logoutFirebase(View view) {

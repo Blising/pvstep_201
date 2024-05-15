@@ -3,41 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/lllogoo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@color/design_default_color_background"
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenScape"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".CalendatActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".ResultsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".item_scan_result"
-            android:exported="false" />
-        <activity
-            android:name=".MenuFixed"
             android:exported="false" />
         <activity
             android:name=".AddActivity"
             android:exported="false" />
         <activity
             android:name=".DbFirebaseMain"
-            android:exported="false" />
-        <activity
-            android:name=".MenuSecondRows"
-            android:exported="false" />
-        <activity
-            android:name=".TestPlants"
-            android:exported="false" />
-        <activity
-            android:name=".infoMenu"
             android:exported="false" />
         <activity
             android:name=".RecycleSearchActivity"
@@ -65,9 +56,6 @@
             android:exported="false" />
         <activity
             android:name=".MenuActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HomeFragment"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
