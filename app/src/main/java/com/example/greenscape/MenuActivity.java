@@ -29,6 +29,8 @@ public class MenuActivity extends AppCompatActivity {
     private Button bCreateOrder;
     private Button btnDb;
     private ImageView IWcalendar;
+    private ImageView btnListCalendar;
+
 
     // Firebase authentication
     private FirebaseAuth auth;
@@ -48,6 +50,7 @@ public class MenuActivity extends AppCompatActivity {
         bCreateOrder= findViewById(R.id.bCreateOrder);
         bSearchRecycle  = findViewById(R.id.searchView);
         bAnswearCv = findViewById(R.id.imageAi);
+        btnListCalendar = findViewById(R.id.btnListCalendar);
 
         btnDb = findViewById(R.id.btnSomfingElse);
 
@@ -60,6 +63,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
         bUroom.setOnClickListener(this::goRoomusers);
+
         btnStorage.setOnClickListener(this::dowloadPhotoTithFireBase);
         bCreateOrder.setOnClickListener(this::MoveOrderByPlants);
         bSearchRecycle.setOnClickListener(this::GotoSearchList);
@@ -72,12 +76,20 @@ public class MenuActivity extends AppCompatActivity {
         btnExit.setOnClickListener(this::goToRegister);
         btnLogoutFireBase.setOnClickListener(this::logoutFirebase);
         IWcalendar.setOnClickListener(this::gotoCalendarActivity);
+        btnListCalendar.setOnClickListener(this::gotoListCalendar);
+
+    }
+
+
+
+    private void gotoListCalendar(View view) {
+        Intent intent = new Intent(MenuActivity.this, SecondActivity.class);
+        startActivity(intent);
     }
 
     private void gotoCalendarActivity(View view) {
-        String displayName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
-        Toast.makeText(this,"Calendar: "+displayName,Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MenuActivity.this,CalendatActivity.class);
+
+        Intent intent = new Intent(MenuActivity.this, Calen.class);
         startActivity(intent);
     }
 

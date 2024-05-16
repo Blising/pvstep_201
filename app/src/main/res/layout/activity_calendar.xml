@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calen">
+
+    <EditText
+
+
+        android:id="@+id/et_plant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:hint="НАЗВА РОСЛИНИ"
+        android:padding="16dp" />
+
+    <EditText
+        android:id="@+id/in_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_plant_name"
+        android:layout_marginTop="16dp"
+        android:hint="ОБРАТИ ДАТУ"
+        android:padding="16dp" />
+
+    <Button
+        android:backgroundTint="#8FBA4B"
+        android:id="@+id/btn_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_date"
+        android:layout_marginTop="8dp"
+        android:text="ОБРАТИ ДАТУ "
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/in_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_date"
+        android:layout_marginTop="16dp"
+        android:hint="ОБРАТИ ГОДИНУ"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/btn_time"
+        android:backgroundTint="#8FBA4B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_time"
+        android:layout_marginTop="8dp"
+        android:text="ОБРАТИ ЧАС"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_time"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#637F44"
+        android:text="ЗБЕРЕГТИ"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_save"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#8FBA4B"
+        android:text="ЗАВАНТАЖИТИ ФОТО"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/img_plant"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/btn_capture"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="4dp"
+       />
+
+    <ImageView
+        android:background="#637F44"
+        android:id="@+id/imageView24"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        app:srcCompat="@drawable/headerrrrr" />
+
+</RelativeLayout>
