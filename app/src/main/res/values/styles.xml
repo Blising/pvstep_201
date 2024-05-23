@@ -2,6 +2,7 @@
 <resources>
 <style name="roundedImageView"  parent="Theme.Material3.Dark.NoActionBar">
     <item name="cornerFamily">rounded</item>
+
     <item name="cornerSize">50%</item>
 
 </style>

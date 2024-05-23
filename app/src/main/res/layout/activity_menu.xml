@@ -153,21 +153,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/theertRow" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLogoutFireBase"
-        android:layout_width="86dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="28dp"
-        android:background="@drawable/logout25"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.368" />
+
 
     <ImageView
         android:layout_marginBottom="200dp"
         android:id="@+id/imageView6"
-        android:layout_width="853dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="#637F44"
         app:layout_constraintEnd_toEndOf="parent"
@@ -185,21 +176,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/headerrrrr" />
 
-    <ImageView
-        android:id="@+id/IWcalendar"
-        android:layout_width="111dp"
-        android:layout_height="88dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnLogout"
-        app:layout_constraintEnd_toStartOf="@+id/btnLogout"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnLogout"
-        app:layout_constraintVertical_bias="0.523"
-        app:srcCompat="@drawable/baseline_calendar_month_24" />
 
     <ImageView
         android:id="@+id/btnListCalendar"
         android:layout_width="100dp"
+        android:visibility="invisible"
         android:layout_height="100dp"
         android:layout_marginStart="77dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnLogout"

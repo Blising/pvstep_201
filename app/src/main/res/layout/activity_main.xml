@@ -48,21 +48,21 @@
     <com.google.android.gms.common.SignInButton
         android:id="@+id/singIn"
 
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:clickable="false"
-        android:layout_marginTop="350dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginBottom="16dp"
         android:background="#8FBA4B"
-
         android:backgroundTint="#8FBA4B"
+
+        android:clickable="false"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/btnLogout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogout"

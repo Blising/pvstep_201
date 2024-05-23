@@ -4,12 +4,16 @@ package com.example.greenscape;
 // Imports
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -24,11 +28,10 @@ public class MenuActivity extends AppCompatActivity {
 
     private Button btnExit;
     private Button btnStorage;
-    private  Button btnLogoutFireBase;
 
     private Button bCreateOrder;
     private Button btnDb;
-    private ImageView IWcalendar;
+
     private ImageView btnListCalendar;
 
 
@@ -39,9 +42,8 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu); // Set the layout file for this activity
-
-        btnLogoutFireBase = findViewById(R.id.btnLogoutFireBase);
+        setContentView(R.layout.activity_menu);
+        // Set the layout file for this activity
 
         // Initialize UI components
         bUroom = findViewById(R.id.bUsersRoom);
@@ -55,7 +57,7 @@ public class MenuActivity extends AppCompatActivity {
         btnDb = findViewById(R.id.btnSomfingElse);
 
         btnExit = findViewById(R.id.btnLogout);
-        IWcalendar =findViewById(R.id.IWcalendar);
+
 
 
         // Initialize Firebase authentication
@@ -74,12 +76,67 @@ public class MenuActivity extends AppCompatActivity {
 
 
         btnExit.setOnClickListener(this::goToRegister);
-        btnLogoutFireBase.setOnClickListener(this::logoutFirebase);
-        IWcalendar.setOnClickListener(this::gotoCalendarActivity);
+
         btnListCalendar.setOnClickListener(this::gotoListCalendar);
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.settings) {
+            Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (item.getItemId() == R.id.accaunt) {
+            Toast.makeText(this, "accaunt", Toast.LENGTH_SHORT).show();
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            if (user != null) {
+                String photoUrl = user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : "";
+                String displayName = user.getDisplayName() != null ? user.getDisplayName() : "";
+                String email = user.getEmail() != null ? user.getEmail() : "";
+
+                Intent intent = new Intent(MenuActivity.this, RoomUsersActivity.class);
+                intent.putExtra("photoUrl", photoUrl);
+                intent.putExtra("displayName", displayName);
+                intent.putExtra("email", email);
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "Something wrong Authentication: ", Toast.LENGTH_SHORT).show();
+            }
+
+            return true;
+        } else if (item.getItemId() == R.id.error) {
+            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (item.getItemId() == R.id.logout) {
+            Toast.makeText(this, "logout", Toast.LENGTH_SHORT).show();
+            String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+
+
+            Toast.makeText(this,"Logout: "+ email , Toast.LENGTH_SHORT).show();
+
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(MenuActivity.this,MainActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.calendar) {
+            Intent intent = new Intent(MenuActivity.this, Calen.class);
+            startActivity(intent);
+
+
+            return true;
+
+        }
+
+
+
+        return super.onOptionsItemSelected(item);
+    }
 
 
     private void gotoListCalendar(View view) {
@@ -87,22 +144,8 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void gotoCalendarActivity(View view) {
-
-        Intent intent = new Intent(MenuActivity.this, Calen.class);
-        startActivity(intent);
-    }
-
-    private void logoutFirebase(View view) {
-        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
 
-        Toast.makeText(this,"Logout: "+ email , Toast.LENGTH_SHORT).show();
-
-        FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(MenuActivity.this,MainActivity.class);
-        startActivity(intent);
-    }
 
 
     private void GotoLibrary(View view) {
