@@ -3,6 +3,7 @@ package com.example.greenscape;
 
 // Imports
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -111,9 +112,19 @@ public class MenuActivity extends AppCompatActivity {
 
             return true;
         } else if (item.getItemId() == R.id.error) {
-            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
+            // Створіть об'єкт Intent для відкриття браузера з вказаною URL-адресою
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSdvAW0XnEdiNpIDsrkELNinQ-xYLtNapgfl3bZrnSFsZgnbaQ/viewform?usp=sf_link"));
+            // Перевірте, чи існує додаток, який може обробити цей Intent
+            if (browserIntent.resolveActivity(getPackageManager()) != null) {
+                // Запустіть Intent, якщо є додаток, який може обробити його
+                startActivity(browserIntent);
+            } else {
+                // Якщо немає додатків, які можуть обробити цей Intent, виведіть повідомлення про помилку
+                Toast.makeText(this, "No application can handle this request", Toast.LENGTH_SHORT).show();
+            }
             return true;
-        } else if (item.getItemId() == R.id.logout) {
+
+    } else if (item.getItemId() == R.id.logout) {
             Toast.makeText(this, "logout", Toast.LENGTH_SHORT).show();
             String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
