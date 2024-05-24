@@ -2,28 +2,31 @@
 package com.example.greenscape;
 
 // Imports
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.bumptech.glide.Glide;
 
 // RoomUsersActivity class definition
 public class RoomUsersActivity extends AppCompatActivity {
     // UI components
-    private Button btn;
+
 
     // onCreate method
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_users); // Set the layout file for this activity
-        btn = findViewById(R.id.btnExit); // Initialize the button
 
-        btn.setOnClickListener(this::gomeny); // Set click listener for the button
 
         // Get data from intent
         String photoUrl = getIntent().getStringExtra("photoUrl");
@@ -41,9 +44,27 @@ public class RoomUsersActivity extends AppCompatActivity {
         emailTextView.setText(email); // Set email
     }
 
-    // Method to navigate to the main menu
-    private void gomeny(View view) {
-        Intent intent = new Intent(RoomUsersActivity.this, MenuActivity.class);
-        startActivity(intent);
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.prevmeny,menu);
+        return  true;
     }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.backtomenu) {
+            Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(RoomUsersActivity.this, MenuActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.exit) {
+            Intent intent = new Intent(RoomUsersActivity.this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
 }

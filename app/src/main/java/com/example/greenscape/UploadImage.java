@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -92,6 +94,32 @@ public class UploadImage extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.prevmeny,menu);
+        return  true;
+
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.backtomenu) {
+            Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(UploadImage.this, MenuActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.exit) {
+            Intent intent = new Intent(UploadImage.this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     // Method to open file chooser
     private void openFileChooser() {

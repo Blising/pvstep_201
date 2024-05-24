@@ -3,6 +3,8 @@ package com.example.greenscape;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,8 +12,12 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.HashMap;
 
@@ -33,6 +39,32 @@ public class RecycleSearchActivity extends AppCompatActivity {
     ArrayAdapter<String> arrayAdapter;
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.prevmeny,menu);
+        return  true;
+
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.backtomenu) {
+            Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(RecycleSearchActivity.this, MenuActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.exit) {
+            Intent intent = new Intent(RecycleSearchActivity.this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this); // Enable edge-to-edge display

@@ -1,6 +1,9 @@
 package com.example.greenscape;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,6 +46,7 @@ btnAdd.setOnClickListener(new View.OnClickListener() {
 
     }
 });
+
 btnBack.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -72,8 +76,32 @@ btnBack.setOnClickListener(new View.OnClickListener() {
 
                     }
                 });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.prevmeny,menu);
+        return  true;
+
 
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.backtomenu) {
+            Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(AddActivity.this, MenuActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.exit) {
+            Intent intent = new Intent(AddActivity.this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
     private  void clearAll(){
         name.setText("");
         course.setText("");

@@ -5,29 +5,29 @@
 
     <item
         android:id="@+id/settings"
-        android:title="Settings"
+        android:title=""
         app:showAsAction="always"
         android:icon="@drawable/baseline_settings_24" />
     <item
         android:id="@+id/accaunt"
         android:title="Account"
-        app:showAsAction="always"
+        app:showAsAction="never"
         android:icon="@drawable/accounts_24" />
 
     <item
         android:id="@+id/error"
         android:title="Error"
-        app:showAsAction="always"
+        app:showAsAction="never"
         android:icon="@drawable/error_24" />
     <item
         android:id="@+id/logout"
         android:title="Logout"
-        app:showAsAction="always"
+        app:showAsAction="never"
         android:icon="@drawable/logout_24" />
     <item
         android:id="@+id/calendar"
         android:title="Calendar"
-        app:showAsAction="always"
+        app:showAsAction="never"
         android:icon="@drawable/calendar_24" />
 
 

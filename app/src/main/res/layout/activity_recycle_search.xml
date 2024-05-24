@@ -12,10 +12,10 @@
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_B"
+        android:layout_marginTop="100dp"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
         android:background="#8FBA4B"
         android:textAlignment="center"
         app:iconifiedByDefault="false"

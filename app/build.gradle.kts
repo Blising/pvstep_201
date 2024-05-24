@@ -42,6 +42,14 @@ dependencies {
         include("*.jar")
     })
 
+    implementation ("androidx.room:room-runtime:2.5.1")
+    annotationProcessor ("androidx.room:room-compiler:2.5.1")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel:2.5.1")
+    implementation ("androidx.lifecycle:lifecycle-livedata:2.5.1")
+    implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
+
+
     implementation ("com.google.firebase:firebase-database:19.7.0")
     implementation ("com.firebaseui:firebase-ui-database:7.1.1")
     implementation ("androidx.recyclerview:recyclerview:1.1.0")

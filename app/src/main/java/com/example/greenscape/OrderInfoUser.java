@@ -6,10 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -67,6 +71,32 @@ public class OrderInfoUser extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.prevmeny,menu);
+        return  true;
+
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.backtomenu) {
+            Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(OrderInfoUser.this, MenuActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.exit) {
+            Intent intent = new Intent(OrderInfoUser.this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     // TextWatcher to enable/disable save button based on input field status
     private TextWatcher textWatcher = new TextWatcher() {

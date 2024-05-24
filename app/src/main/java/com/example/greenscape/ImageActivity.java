@@ -51,6 +51,8 @@ public class ImageActivity extends AppCompatActivity {
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");
         // Додавання ValueEventListener для отримання даних з бази даних Firebase
         // Adding a ValueEventListener to fetch data from Firebase database
+
+
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -66,6 +68,8 @@ public class ImageActivity extends AppCompatActivity {
                 mRecycleView.setAdapter(mAdapter);
                 mprogressCircle.setVisibility(View.INVISIBLE); // Making the ProgressBar invisible once data is loaded
             }
+
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {

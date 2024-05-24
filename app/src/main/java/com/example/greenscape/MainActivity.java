@@ -39,6 +39,9 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;// Об'єкт аутентифікації Firebase
+
+
+
     GoogleSignInClient googleSignInClient;// Клієнт входу Google
     ShapeableImageView imageView;// Зображення користувача
     TextView name, mail,NoneAccountView;// TextView для імені, пошти, підказки відсутності акаунта

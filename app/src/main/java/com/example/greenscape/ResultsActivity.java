@@ -47,10 +47,12 @@ public class ResultsActivity extends AppCompatActivity {
                 recyclerView.setAdapter(adapter);
             }
 
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(ResultsActivity.this, "Помилка отримання даних з Firebase: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 }

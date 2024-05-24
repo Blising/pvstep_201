@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+
+    >
 
     <!-- Logo Image -->
 
@@ -49,6 +51,8 @@
         android:id="@+id/singIn"
 
         android:layout_width="match_parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:layout_height="100dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -66,9 +70,10 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogout"
+
         android:layout_width="390dp"
         android:layout_height="70dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/btn3"
         android:backgroundTint="#FEFEFE"
         android:text="Вхід"

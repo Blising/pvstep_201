@@ -6,7 +6,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView; // Змінив імпорт
@@ -54,10 +56,10 @@ FloatingActionButton floatingActionButton;
         });
 
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.search, menu);
+        getMenuInflater().inflate(R.menu.prevmeny, menu); // Додали код для створення нового меню
         MenuItem searchItem = menu.findItem(R.id.search);
         searchView = (SearchView) searchItem.getActionView(); // Змінено тут
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -76,6 +78,28 @@ FloatingActionButton floatingActionButton;
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.backtomenu) {
+            Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(DbFirebaseMain.this, MenuActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.exit) {
+            Intent intent = new Intent(DbFirebaseMain.this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+
+    }
+
+
+
+
+
     private void txtSearch(String str) {
         FirebaseRecyclerOptions<MainModel> options =
                 new FirebaseRecyclerOptions.Builder<MainModel>()
@@ -85,17 +109,7 @@ FloatingActionButton floatingActionButton;
         mainAdapter = new MainAdapter(options);
         mainAdapter.startListening();
         recyclerView.setAdapter(mainAdapter);
-
-
-
-
-
-
-
-
     }
-
-
     @Override
     protected void onStart() {
         super.onStart();

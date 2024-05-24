@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -31,7 +30,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnStorage;
 
     private Button bCreateOrder;
-    private Button btnDb;
+    private Button btnListPlant;
 
     private ImageView btnListCalendar;
 
@@ -55,7 +54,7 @@ public class MenuActivity extends AppCompatActivity {
         bAnswearCv = findViewById(R.id.imageAi);
         btnListCalendar = findViewById(R.id.btnListCalendar);
 
-        btnDb = findViewById(R.id.btnSomfingElse);
+        btnListPlant = findViewById(R.id.btnListPlants);
 
         btnExit = findViewById(R.id.btnLogout);
 
@@ -72,7 +71,7 @@ public class MenuActivity extends AppCompatActivity {
         bSearchRecycle.setOnClickListener(this::GotoSearchList);
         bAnswearCv.setOnClickListener(this::GoToAnswearWithImage);
 
-        btnDb.setOnClickListener(this::GotoLibrary);
+        btnListPlant.setOnClickListener(this::GotoListPlants);
 
 
 
@@ -91,10 +90,10 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.settings) {
-            Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
             return true;
         } else if (item.getItemId() == R.id.accaunt) {
-            Toast.makeText(this, "accaunt", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Account", Toast.LENGTH_SHORT).show();
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
                 String photoUrl = user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : "";
@@ -123,9 +122,8 @@ public class MenuActivity extends AppCompatActivity {
                 Toast.makeText(this, "No application can handle this request", Toast.LENGTH_SHORT).show();
             }
             return true;
-
     } else if (item.getItemId() == R.id.logout) {
-            Toast.makeText(this, "logout", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
             String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
 
@@ -159,7 +157,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
 
-    private void GotoLibrary(View view) {
+    private void GotoListPlants(View view) {
         Toast.makeText(this, "Library", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MenuActivity.this,RecycleSearchActivity.class);
         startActivity(intent);
@@ -182,7 +180,8 @@ public class MenuActivity extends AppCompatActivity {
 
     // Method to navigate to OrderInfoUser activity
     private void MoveOrderByPlants(View view) {
-        Intent intent = new Intent(MenuActivity.this, OrderInfoUser.class);
+
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSezjUnP8PlxQP-IXa7_a-1tX91THrGB9EWW5BLodpIlD9rCEA/viewform?usp=sf_link"));
         startActivity(intent);
     }
 

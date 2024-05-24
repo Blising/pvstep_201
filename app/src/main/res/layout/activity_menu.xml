@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
 
     tools:context=".MenuActivity">
-
+<!-- Використовуйте атрибут colorPrimary -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/firstRow"
@@ -116,13 +116,13 @@
             android:textColor="#0E0501"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnSomfingElse"
+            app:layout_constraintEnd_toStartOf="@+id/btnListPlants"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnSomfingElse"
+            android:id="@+id/btnListPlants"
             android:layout_width="250dp"
             android:layout_height="269dp"
             android:background="@drawable/librarrryyy"

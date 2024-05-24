@@ -11,6 +11,8 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.provider.MediaStore;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -19,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.greenscape.entity.PlantDatabaseHelper;
@@ -61,6 +64,30 @@ public class Calen extends AppCompatActivity {
         btnCapture.setOnClickListener(this::capturePhoto);
         btnDate.setOnClickListener(this::openDatePicker);
         btnTime.setOnClickListener(this::openTimePicker);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.prevmeny,menu);
+        return  true;
+
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.backtomenu) {
+            Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(Calen.this, MenuActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.exit) {
+            Intent intent = new Intent(Calen.this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void create(View view) {
