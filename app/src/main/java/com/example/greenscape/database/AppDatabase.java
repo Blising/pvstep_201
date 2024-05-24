@@ -12,7 +12,7 @@ import com.example.greenscape.entity.Item;
 @Database(entities = {Item.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
-    private static final String DATABASE_NAME = "app_database";
+    private static final String DATABASE_NAME = "greenscape_database";
     private static AppDatabase instance;
 
     public abstract ItemDao itemDao();

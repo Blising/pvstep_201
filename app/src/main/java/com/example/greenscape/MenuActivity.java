@@ -187,7 +187,7 @@ public class MenuActivity extends AppCompatActivity {
 
     // Method to navigate to UploadImage activity
     private void dowloadPhotoTithFireBase(View view) {
-        Intent intent = new Intent(MenuActivity.this, UploadImage.class);
+        Intent intent = new Intent(MenuActivity.this, TestSqllite.class);
         startActivity(intent);
     }
 

@@ -14,11 +14,11 @@ import java.util.List;
 @Dao
 public interface ItemDao {
     @Insert
-     void    insert(Item item);
-     @Update
-     void update(Item item);
-     @Delete
-     void delete(Item item);
+    void    insert(Item item);
+    @Update
+    void update(Item item);
+    @Delete
+    void delete(Item item);
 
     @Query("SELECT * FROM items")
     LiveData<List<Item>> getAllItems();

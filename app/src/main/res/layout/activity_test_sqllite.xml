@@ -8,18 +8,20 @@
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name" />
+        android:hint="Name Plant" />
 
     <EditText
         android:id="@+id/editTextDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextName"
-        android:hint="Description" />
+        android:hint="Description about Plant" />
 
     <Button
         android:id="@+id/buttonChooseImage"
         android:layout_width="wrap_content"
+        android:background="#8FBA4B"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextDescription"
         android:text="Choose Image" />
@@ -28,6 +30,8 @@
         android:id="@+id/buttonAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#8FBA4B"
+        android:textColor="@color/white"
         android:layout_below="@id/buttonChooseImage"
         android:text="Add" />
 

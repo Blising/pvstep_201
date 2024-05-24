@@ -27,8 +27,8 @@ public class ItemRepository {
     public ItemRepository(Application application, Uri imageUri) {
         AppDatabase db = AppDatabase.getInstance(application);
         itemDao = db.itemDao();
-        databaseReference = FirebaseDatabase.getInstance().getReference("items");
-        storageReference = FirebaseStorage.getInstance().getReference("images");
+        databaseReference = FirebaseDatabase.getInstance().getReference("plants_scape");
+        storageReference = FirebaseStorage.getInstance().getReference("plants_scape");
         this.imageUri = imageUri; // Зберігаємо imageUri
     }
 
