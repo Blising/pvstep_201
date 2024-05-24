@@ -1,32 +1,34 @@
 package com.example.greenscape.entity;
 
-
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "items")
 public class Item {
-    @PrimaryKey(autoGenerate = true)
-    public  int id;
+    @PrimaryKey
+    @NonNull
+    public String id;
     public String name;
     public String description;
-    public  String imageUrl;
+    public String imageUrl;
 
     public Item() {
     }
 
-    public Item(int id, String name, String description, String imageUrl) {
+    public Item(String id, String name, String description, String imageUrl) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.imageUrl = imageUrl;
     }
 
-    public int getId() {
+    @NonNull
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(@NonNull String id) {
         this.id = id;
     }
 

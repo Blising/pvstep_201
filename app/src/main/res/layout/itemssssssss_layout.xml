@@ -17,6 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/image_view"
         android:text="Name"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
         android:textSize="18sp" />
 
     <TextView
@@ -26,5 +28,18 @@
         android:layout_below="@id/text_view_name"
         android:layout_toEndOf="@id/image_view"
         android:text="Description"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
         android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:background="#637F44"
+        android:layout_marginTop="8dp" />
 </RelativeLayout>

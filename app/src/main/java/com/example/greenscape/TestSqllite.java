@@ -19,6 +19,27 @@ import com.example.greenscape.model.ItemViewModel;
 
 import java.util.List;
 
+
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.greenscape.adapters.ItemAdapter;
+import com.example.greenscape.entity.Item;
+import com.example.greenscape.model.ItemViewModel;
+
+import java.util.List;
+
 public class TestSqllite extends AppCompatActivity {
     private EditText editTextName;
     private EditText editTextDescription;
@@ -26,7 +47,7 @@ public class TestSqllite extends AppCompatActivity {
     private Button buttonChooseImage;
     private RecyclerView recyclerView;
     private ItemViewModel itemViewModel;
-    private Uri imageUri; // Оголошення поля imageUri
+    private Uri imageUri;
 
     private static final int PICK_IMAGE_REQUEST = 1;
 
@@ -49,7 +70,6 @@ public class TestSqllite extends AppCompatActivity {
 
         itemViewModel = new ViewModelProvider(this).get(ItemViewModel.class);
 
-        // Отримуємо всі елементи при створенні активності
         itemViewModel.getAllItems().observe(this, new Observer<List<Item>>() {
             @Override
             public void onChanged(@Nullable List<Item> items) {
@@ -57,7 +77,6 @@ public class TestSqllite extends AppCompatActivity {
             }
         });
 
-        // Додавання слухача кнопки "Add"
         buttonAdd.setOnClickListener(v -> {
             String name = editTextName.getText().toString().trim();
             String description = editTextDescription.getText().toString().trim();
@@ -65,18 +84,18 @@ public class TestSqllite extends AppCompatActivity {
                 Item item = new Item();
                 item.setName(name);
                 item.setDescription(description);
-                item.setImageUrl(imageUri.toString()); // Передача imageUri в об'єкт Item
+                item.setImageUrl(imageUri.toString());
                 itemViewModel.insert(item);
                 editTextName.setText("");
                 editTextDescription.setText("");
             }
         });
 
-        // Додавання слухача кнопки "Choose Image"
         buttonChooseImage.setOnClickListener(v -> openFileChooser());
+
+        adapter.setOnDeleteClickListener(item -> itemViewModel.delete(item));
     }
 
-    // Метод для вибору зображення з галереї
     private void openFileChooser() {
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -84,7 +103,6 @@ public class TestSqllite extends AppCompatActivity {
         startActivityForResult(intent, PICK_IMAGE_REQUEST);
     }
 
-    // Обробник результату вибору зображення
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

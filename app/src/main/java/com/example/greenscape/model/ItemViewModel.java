@@ -1,8 +1,8 @@
 package com.example.greenscape.model;
 
 import android.app.Application;
-import android.net.Uri;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
@@ -14,22 +14,11 @@ import java.util.List;
 public class ItemViewModel extends AndroidViewModel {
     private ItemRepository repository;
     private LiveData<List<Item>> allItems;
-    private Uri imageUri; // Оголошення поля imageUri
 
-    public ItemViewModel(Application application) {
+    public ItemViewModel(@NonNull Application application) {
         super(application);
-        repository = new ItemRepository(application, imageUri); // Передача imageUri до репозиторію
+        repository = new ItemRepository(application);
         allItems = repository.getAllItems();
-        repository.syncDataFromFirebase();
-    }
-
-    public LiveData<List<Item>> getAllItems() {
-        return allItems;
-    }
-
-    public void setImageUri(Uri imageUri) {
-        this.imageUri = imageUri;
-        repository = new ItemRepository(getApplication(), imageUri); // Передача оновленого imageUri до репозиторію
     }
 
     public void insert(Item item) {
@@ -42,5 +31,9 @@ public class ItemViewModel extends AndroidViewModel {
 
     public void delete(Item item) {
         repository.delete(item);
+    }
+
+    public LiveData<List<Item>> getAllItems() {
+        return allItems;
     }
 }

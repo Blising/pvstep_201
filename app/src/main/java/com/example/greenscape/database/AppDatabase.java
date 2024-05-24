@@ -9,10 +9,9 @@ import androidx.room.RoomDatabase;
 import com.example.greenscape.dao.ItemDao;
 import com.example.greenscape.entity.Item;
 
-@Database(entities = {Item.class}, version = 1, exportSchema = false)
+@Database(entities = {Item.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
 
-    private static final String DATABASE_NAME = "greenscape_database";
     private static AppDatabase instance;
 
     public abstract ItemDao itemDao();
@@ -20,7 +19,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public static synchronized AppDatabase getInstance(Context context) {
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),
-                            AppDatabase.class, DATABASE_NAME)
+                            AppDatabase.class, "item_database")
                     .fallbackToDestructiveMigration()
                     .build();
         }
