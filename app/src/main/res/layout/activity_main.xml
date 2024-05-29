@@ -5,13 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity"
-
-    >
-
-    <!-- Logo Image -->
-
-    <!-- Profile Image and Other Views -->
+    tools:context=".MainActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/logoImage"
@@ -27,7 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/lllogoo" />
 
-
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -42,14 +35,10 @@
             android:layout_width="1sp"
             android:layout_height="1sp"
             android:visibility="invisible" />
-
     </RelativeLayout>
-
-    <!-- Buttons -->
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/singIn"
-
         android:layout_width="match_parent"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
@@ -59,18 +48,16 @@
         android:layout_marginBottom="16dp"
         android:background="#8FBA4B"
         android:backgroundTint="#8FBA4B"
-
         android:clickable="false"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogout"
+        app:layout_constraintBottom_toTopOf="@+id/btnScanNet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLogout"
-
+        android:id="@+id/btnScanNet"
         android:layout_width="390dp"
         android:layout_height="70dp"
         android:layout_marginTop="100dp"
@@ -85,7 +72,6 @@
         app:layout_constraintStart_toStartOf="@+id/singIn"
         app:layout_constraintTop_toBottomOf="@+id/singIn" />
 
-    <!-- Placeholder for Name -->
     <TextView
         android:id="@+id/nameTV"
         android:layout_width="wrap_content"
@@ -99,9 +85,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.1" />
 
-    <!-- Placeholder for Email -->
-
-    <!-- None Account View -->
     <TextView
         android:id="@+id/mailTV"
         android:layout_width="wrap_content"
@@ -121,16 +104,16 @@
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
         android:layout_height="55dp"
-        android:text="Немає облікового запису ?"
+        android:text="Немає облікового запису?"
         android:textAlignment="center"
         android:textColor="#708C55"
         android:textSize="25sp"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnLogout"
+        app:layout_constraintEnd_toEndOf="@+id/btnScanNet"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/btnLogout"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogout"
+        app:layout_constraintStart_toStartOf="@+id/btnScanNet"
+        app:layout_constraintTop_toBottomOf="@+id/btnScanNet"
         app:layout_constraintVertical_bias="0.081" />
 
     <ImageView
@@ -150,6 +133,5 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView20"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/headerrrrr" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -137,8 +137,9 @@
             app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLogout"
+        android:id="@+id/btnScanNet"
         android:layout_width="137dp"
         android:layout_height="102dp"
         android:layout_below="@+id/theertRow"
@@ -149,11 +150,9 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/theertRow" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/theertRow"
+        app:layout_constraintVertical_bias="0.501" />
 
     <ImageView
         android:layout_marginBottom="200dp"
@@ -183,10 +182,10 @@
         android:visibility="invisible"
         android:layout_height="100dp"
         android:layout_marginStart="77dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnLogout"
+        app:layout_constraintBottom_toBottomOf="@+id/btnScanNet"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnLogout"
-        app:layout_constraintTop_toTopOf="@+id/btnLogout"
+        app:layout_constraintStart_toEndOf="@+id/btnScanNet"
+        app:layout_constraintTop_toTopOf="@+id/btnScanNet"
         app:srcCompat="@drawable/calendar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
