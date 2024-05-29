@@ -6,7 +6,7 @@
     <item
         android:id="@+id/settings"
         android:title=""
-        app:showAsAction="always"
+        app:showAsAction="never"
         android:icon="@drawable/baseline_settings_24" />
     <item
         android:id="@+id/accaunt"
@@ -29,6 +29,11 @@
         android:title="Calendar"
         app:showAsAction="never"
         android:icon="@drawable/calendar_24" />
+    <item android:id="@+id/backtomenu"
+        android:title="Back"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_menu_24"/>
+
 
 
 

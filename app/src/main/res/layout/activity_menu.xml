@@ -22,7 +22,7 @@
             android:id="@+id/bUsersRoom"
             android:layout_width="250dp"
             android:layout_height="269dp"
-            android:background="@drawable/roomuser2"
+            android:background="@drawable/usr"
             android:gravity="bottom|center_horizontal"
 
             android:textColor="#0E0501"
@@ -38,7 +38,7 @@
             android:id="@+id/imageAi"
             android:layout_width="260dp"
             android:layout_height="269dp"
-            android:background="@drawable/s1"
+            android:background="@drawable/aivision"
             android:gravity="bottom|center_horizontal"
             android:textColor="#000000"
             android:textSize="30sp"
@@ -63,10 +63,10 @@
         app:layout_constraintTop_toBottomOf="@id/firstRow">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnStorage"
+            android:id="@+id/searchView"
             android:layout_width="250dp"
             android:layout_height="269dp"
-            android:background="@drawable/addph"
+            android:background="@drawable/myplantssss"
             android:gravity="bottom|center_horizontal"
             android:textColor="#0E0501"
             android:textSize="20sp"
@@ -89,7 +89,7 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnStorage"
+            app:layout_constraintStart_toEndOf="@+id/searchView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
@@ -107,16 +107,16 @@
         app:layout_constraintTop_toBottomOf="@id/secondRow">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/searchView"
+            android:id="@+id/btnStorage"
             android:layout_width="250dp"
             android:layout_height="269dp"
-            android:background="@drawable/myplantssss"
+            android:background="@drawable/calll"
             android:gravity="bottom|center_horizontal"
-
             android:textColor="#0E0501"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnListPlants"
+            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
@@ -125,20 +125,21 @@
             android:id="@+id/btnListPlants"
             android:layout_width="250dp"
             android:layout_height="269dp"
-            android:background="@drawable/librarrryyy"
+            android:background="@drawable/doglyad"
             android:gravity="bottom|left"
 
             android:textColor="#0E0501"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/searchView"
+            app:layout_constraintStart_toEndOf="@+id/btnStorage"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLogout"
+        android:id="@+id/btnScanNet"
         android:layout_width="137dp"
         android:layout_height="102dp"
         android:layout_below="@+id/theertRow"
@@ -149,11 +150,9 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/theertRow" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/theertRow"
+        app:layout_constraintVertical_bias="0.501" />
 
     <ImageView
         android:layout_marginBottom="200dp"
@@ -183,10 +182,10 @@
         android:visibility="invisible"
         android:layout_height="100dp"
         android:layout_marginStart="77dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnLogout"
+        app:layout_constraintBottom_toBottomOf="@+id/btnScanNet"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnLogout"
-        app:layout_constraintTop_toTopOf="@+id/btnLogout"
+        app:layout_constraintStart_toEndOf="@+id/btnScanNet"
+        app:layout_constraintTop_toTopOf="@+id/btnScanNet"
         app:srcCompat="@drawable/calendar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

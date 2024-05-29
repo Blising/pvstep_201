@@ -21,14 +21,11 @@
             android:id="@+id/profileImage"
             android:layout_width="257dp"
             android:layout_height="225dp"
-            android:layout_centerHorizontal="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.603"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/twooRow"
@@ -40,50 +37,68 @@
         app:layout_constraintTop_toBottomOf="@+id/headerRow">
 
         <TextView
-
-
-
             android:id="@+id/displayNameTextView"
             android:layout_width="279dp"
             android:layout_height="41dp"
-
-            android:layout_centerHorizontal="true"
             android:text="Display Name"
             android:textAlignment="center"
             android:textAllCaps="true"
-
             android:textColor="@android:color/black"
             android:textSize="18sp"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emailTextView"
             app:layout_constraintVertical_bias="0.214" />
 
         <TextView
-            android:shadowColor="#637F44"
             android:id="@+id/emailTextView"
             android:layout_width="262dp"
             android:layout_height="41dp"
-            android:layout_below="@id/displayNameTextView"
-            android:layout_centerHorizontal="true"
-
-            android:layout_marginTop="4dp"
-
             android:text="Email"
-            android:textColorHint="#637F44"
-
-            android:textAlignment="center"
-            android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.588"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- New fields for additional user information -->
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displayNameTextView" />
+
+        <EditText
+            android:id="@+id/countryEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Country"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneEditText" />
+
+        <EditText
+            android:id="@+id/addressEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countryEditText" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twooRow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

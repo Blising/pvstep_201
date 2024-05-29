@@ -14,6 +14,7 @@ import com.example.greenscape.R;
 import com.example.greenscape.entity.Item;
 import com.squareup.picasso.Picasso;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +36,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
         holder.textViewName.setText(currentItem.getName());
         holder.textViewDescription.setText(currentItem.getDescription());
         if (currentItem.getImageUrl() != null && !currentItem.getImageUrl().isEmpty()) {
-            Picasso.get().load(currentItem.getImageUrl()).into(holder.imageView);
+            Picasso.get().load(new File(currentItem.getImageUrl())).into(holder.imageView);
         } else {
             holder.imageView.setImageResource(R.drawable.f2);
         }
