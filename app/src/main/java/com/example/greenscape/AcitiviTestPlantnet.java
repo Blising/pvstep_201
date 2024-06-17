@@ -10,9 +10,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -61,7 +58,7 @@ public class AcitiviTestPlantnet extends AppCompatActivity {
     private File photoFile;
 
     private GoogleTranslateApi googleTranslateApi;
-    private static final String API_KEY = "AIzaSyABmu1Xx6J8U1q2o3ysGZRqsTUQLty2-2s";
+    private static final String API_KEY = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,28 +96,6 @@ public class AcitiviTestPlantnet extends AppCompatActivity {
                 dispatchPickPictureIntent();
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
-        if (id==R.id.backtomenu) {
-            Intent intent = new Intent(AcitiviTestPlantnet.this, MenuActivity.class);
-            startActivity(intent);
-
-        }
-            return true;
-
-
-
     }
 
     private boolean checkPermissions() {
@@ -273,7 +248,7 @@ public class AcitiviTestPlantnet extends AppCompatActivity {
     }
 
     private void identifyPlant(File imageFile) {
-        String url = "https://my-api.plantnet.org/v2/identify/all?api-key=2b10zjl91QSvDPcXwYKHlEOO";
+        String url = "https://my-api.plantnet.org/v2/identify/all?api-key=";
 
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
@@ -331,7 +306,7 @@ public class AcitiviTestPlantnet extends AppCompatActivity {
                                                         plantList.add(plant);  // Добавляем лучший результат
                                                         runOnUiThread(() -> {
                                                             plantAdapter.notifyDataSetChanged();
-                                                            textView.setText("Рослина Ідентифікована Успішно:.");
+                                                            textView.setText("Plant identified successfully.");
                                                         });
                                                     }
 
@@ -373,14 +348,14 @@ public class AcitiviTestPlantnet extends AppCompatActivity {
     }
 
     private void translateText(String text, TranslateCallback callback) {
-        googleTranslateApi.translate(API_KEY, text, "en", "uk").enqueue(new retrofit2.Callback<TranslationResponse>() {
+        googleTranslateApi.translate(API_KEY, text, "en", "ru").enqueue(new retrofit2.Callback<TranslationResponse>() {
             @Override
             public void onResponse(retrofit2.Call<TranslationResponse> call, retrofit2.Response<TranslationResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     String translatedText = response.body().data.translations.get(0).translatedText;
                     callback.onSuccess(translatedText);
                 } else {
-                    callback.onFailure("Помилка перекладу ");
+                    callback.onFailure("Translation failed");
                 }
             }
 

@@ -35,8 +35,8 @@ import okhttp3.Response;
 
 public class CheckoutActivity extends AppCompatActivity {
 
-    private static final String BACKEND_URL = "http://192.168.0.166:3000/create-payment-intent";
-    private static final String STRIPE_PUBLISHABLE_KEY = "pk_test_51PM5g2FMN9f0uOqEdzqsHTDmC38RztgLObvO7ogoI6zMXVoNoOKOHAibl0eg5XX6ILyBv82wfO4KI8yW2hZxz6m700EJii6QSv"; // Використовуйте ваш публічний ключ
+    private static final String BACKEND_URL = "http://";
+    private static final String STRIPE_PUBLISHABLE_KEY = ""; // Використовуйте ваш публічний ключ
 
     private Stripe stripe;
     private String clientSecret;

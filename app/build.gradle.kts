@@ -50,13 +50,6 @@ dependencies {
         include("*.jar")
     })
 
-
-    implementation ("com.stripe:stripe-android:20.8.0")
-    implementation ("com.squareup.okhttp3:okhttp:4.9.1")
-    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.1")
-    implementation ("com.google.code.gson:gson:2.8.6")
-
-
     implementation("androidx.room:room-runtime:2.5.1")
     annotationProcessor("androidx.room:room-compiler:2.5.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.5.1")

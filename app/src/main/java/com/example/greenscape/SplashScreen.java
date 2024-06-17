@@ -24,7 +24,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 // Start MainActivity after 3 seconds
-                startActivity(new Intent(SplashScreen.this, MainActivity.class));
+                startActivity(new Intent(SplashScreen.this,MainActivity.class));
                 // Finish the SplashScreen activity
                 finish();
             }

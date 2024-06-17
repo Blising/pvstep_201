@@ -10,8 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -41,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     GoogleSignInClient googleSignInClient;
     ShapeableImageView imageView;
     TextView name, mail, NoneAccountView;
-    private Button bLogout, buttonLogin;
+    private Button bLogout;
 
     private final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
@@ -83,25 +81,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     });
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        int id = item.getItemId();
-        if (id == R.id.backtomenu) {
-            Intent intent = new Intent(MainActivity.this, SplashScreen.class);
-            startActivity(intent);
-        }
-        return true;
-
-
-
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,9 +102,7 @@ public class MainActivity extends AppCompatActivity {
             NoneAccountView = findViewById(R.id.NoneAccountView);
             mail = findViewById(R.id.mailTV);
             bLogout = findViewById(R.id.btnScanNet);
-            buttonLogin = findViewById(R.id.buttonLogin); // Новий елемент для входу
-            NoneAccountView.setOnClickListener(this::goToRegister);
-            buttonLogin.setOnClickListener(this::goToLogin);
+            NoneAccountView.setOnClickListener(this::ToastNoneAccount);
 
             bLogout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -135,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                     editor.putBoolean("isLoggedIn", false);
                     editor.apply();
 
-                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                    Intent intent = new Intent(MainActivity.this, MenuActivity.class);
                     startActivity(intent);
                     finish();
                 }
@@ -156,18 +134,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-    }
-
-    // Метод для обробки кліку на NoneAccountView
-    private void goToRegister(View view) {
-        Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
-        startActivity(intent);
-    }
-
-    // Метод для обробки кліку на buttonLogin
-    private void goToLogin(View view) {
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-        startActivity(intent);
     }
 
     private void ToastNoneAccount(View view) {

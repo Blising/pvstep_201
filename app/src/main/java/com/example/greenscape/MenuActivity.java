@@ -127,7 +127,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void GotoSearchList(View view) {
-        Intent intent = new Intent(MenuActivity.this, TestSqllite.class);
+        Intent intent = new Intent(MenuActivity.this, DbFirebaseMain.class);
         startActivity(intent);
     }
 
@@ -137,12 +137,12 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void MoveOrderByPlants(View view) {
-        Intent intent = new Intent( MenuActivity.this,MainOrder.class);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSezjUnP8PlxQP-IXa7_a-1tX91THrGB9EWW5BLodpIlD9rCEA/viewform?usp=sf_link"));
         startActivity(intent);
     }
 
     private void dowloadPhotoTithFireBase(View view) {
-        Intent intent = new Intent(MenuActivity.this, Calen.class);
+        Intent intent = new Intent(MenuActivity.this, TestSqllite.class);
         startActivity(intent);
     }
 
