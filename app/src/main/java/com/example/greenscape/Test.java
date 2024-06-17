@@ -18,7 +18,7 @@ public class Test {
     private static final String IMAGE1 = "/data/media/image_1.jpeg";
     private static final String IMAGE2 = "/data/media/image_2.jpeg";
     private static final String PROJECT = "all";
-    private static final String URL = "https://my-api.plantnet.org/v2/identify/" + PROJECT + "?api-key=2b10zjl91QSvDPcXwYKHlEOO";
+    private static final String URL = "https://my-api.plantnet.org/v2/identify/" + PROJECT + "?api-key=";
 
     public static void main(String[] args) {
         File file1 = new File(IMAGE1);

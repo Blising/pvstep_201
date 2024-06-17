@@ -20,12 +20,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainOrder"
-            android:exported="false" />
-        <activity
             android:name=".AcitiviTestPlantnet"
             android:exported="false" />
         <activity
@@ -68,13 +62,7 @@
             android:name=".UploadImage"
             android:exported="false" />
         <activity
-            android:name=".CheckoutActivity"
-            android:exported="false" />
-        <activity
             android:name=".RoomUsersActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MenuActivity"
@@ -92,7 +80,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -102,6 +89,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths_net" />
         </provider>
+
+
     </application>
 
 </manifest>
