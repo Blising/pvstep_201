@@ -9,16 +9,19 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/logoImage"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="116dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#FEFEFE"
         android:textAlignment="center"
-        app:shapeAppearanceOverlay="@style/RoundedImageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedImageView"
         app:srcCompat="@drawable/lllogoo" />
 
     <RelativeLayout
@@ -39,12 +42,10 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/singIn"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
         android:layout_marginBottom="16dp"
         android:background="#8FBA4B"
         android:backgroundTint="#8FBA4B"
@@ -52,23 +53,28 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/btnScanNet"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnScanNet"
-        android:layout_width="390dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/btn3"
         android:backgroundTint="#FEFEFE"
-        android:text="Вхід"
-        android:visibility="visible"
         android:clickable="true"
+        android:text="Вхід"
         android:textColor="#6A765D"
-        android:textSize="25sp"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/NoneAccountView"
         app:layout_constraintEnd_toEndOf="@+id/singIn"
+        app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="@+id/singIn"
         app:layout_constraintTop_toBottomOf="@+id/singIn" />
 
@@ -100,28 +106,28 @@
 
     <TextView
         android:id="@+id/NoneAccountView"
-        android:layout_width="match_parent"
-        android:layout_marginRight="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_height="55dp"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
         android:text="Немає облікового запису?"
         android:textAlignment="center"
         android:textColor="#708C55"
-        android:textSize="25sp"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/btnScanNet"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.632"
         app:layout_constraintStart_toStartOf="@+id/btnScanNet"
-        app:layout_constraintTop_toBottomOf="@+id/btnScanNet"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintTop_toBottomOf="@+id/btnScanNet" />
 
     <ImageView
         android:id="@+id/imageView20"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
         android:background="#637F44"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -130,8 +136,10 @@
         android:layout_width="303dp"
         android:layout_height="37dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView20"
-        app:layout_constraintEnd_toEndOf="@+id/imageView20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/nameTV"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846"
         app:srcCompat="@drawable/headerrrrr" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

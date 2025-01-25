@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/firstRow"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="100dp"
         android:paddingTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,8 +20,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bUsersRoom"
-            android:layout_width="250dp"
-            android:layout_height="269dp"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
             android:background="@drawable/usr"
             android:gravity="bottom|center_horizontal"
 
@@ -36,8 +36,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/imageAi"
-            android:layout_width="260dp"
-            android:layout_height="269dp"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
             android:background="@drawable/aivision"
             android:gravity="bottom|center_horizontal"
             android:textColor="#000000"
@@ -56,7 +56,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/secondRow"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="100dp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,8 +64,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/searchView"
-            android:layout_width="250dp"
-            android:layout_height="269dp"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
             android:background="@drawable/myplantssss"
             android:gravity="bottom|center_horizontal"
             android:textColor="#0E0501"
@@ -79,8 +79,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bCreateOrder"
-            android:layout_width="250dp"
-            android:layout_height="269dp"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
 
             android:background="@drawable/storeeeee"
             android:gravity="bottom|center_horizontal"
@@ -99,17 +99,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/theertRow"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="100dp"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/secondRow">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnStorage"
-            android:layout_width="250dp"
-            android:layout_height="269dp"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
             android:background="@drawable/calll"
             android:gravity="bottom|center_horizontal"
             android:textColor="#0E0501"
@@ -123,8 +123,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnListPlants"
-            android:layout_width="250dp"
-            android:layout_height="269dp"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
             android:background="@drawable/doglyad"
             android:gravity="bottom|left"
 
@@ -137,22 +137,19 @@
             app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnScanNet"
-        android:layout_width="137dp"
-        android:layout_height="102dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/theertRow"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:background="@drawable/greenscannn"
         android:gravity="center"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/theertRow"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintTop_toBottomOf="@+id/theertRow" />
 
     <ImageView
         android:layout_marginBottom="200dp"
@@ -168,8 +165,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="383dp"
-        android:layout_height="66dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

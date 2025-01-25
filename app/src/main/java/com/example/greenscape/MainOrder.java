@@ -43,14 +43,14 @@ public class MainOrder extends AppCompatActivity implements PlantAdapterStore.On
         adapter = new PlantAdapterStore(plantStoreModelList, this);
         recyclerView.setAdapter(adapter);
 
-        Button checkoutButton = findViewById(R.id.checkoutButton);
-        checkoutButton.setOnClickListener(v -> {
-            // Перехід до активіті оплати
-            Intent intent = new Intent(MainOrder.this, CheckoutActivity.class);
-            intent.putParcelableArrayListExtra("cart", new ArrayList<>(cart));
-            intent.putExtra("totalAmount", totalAmount);
-            startActivity(intent);
-        });
+//        Button checkoutButton = findViewById(R.id.checkoutButton);
+//        checkoutButton.setOnClickListener(v -> {
+//            // Перехід до активіті оплати
+//            Intent intent = new Intent(MainOrder.this, CheckoutActivity.class);
+//            intent.putParcelableArrayListExtra("cart", new ArrayList<>(cart));
+//            intent.putExtra("totalAmount", totalAmount);
+//            startActivity(intent);
+//        });
     }
 
 

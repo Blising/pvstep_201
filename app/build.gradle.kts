@@ -35,12 +35,16 @@ android {
         animationsDisabled = true
     }
     packagingOptions {
-        exclude("META-INF/INDEX.LIST")
-        exclude("META-INF/DEPENDENCIES")
-        exclude("META-INF/NOTICE")
-        exclude("META-INF/LICENSE")
-        exclude("META-INF/LICENSE.txt")
-        exclude("META-INF/NOTICE.txt")
+        resources {
+            excludes += setOf(
+                "META-INF/INDEX.LIST",
+                "META-INF/DEPENDENCIES",
+                "META-INF/NOTICE",
+                "META-INF/LICENSE",
+                "META-INF/LICENSE.txt",
+                "META-INF/NOTICE.txt"
+            )
+        }
     }
 }
 

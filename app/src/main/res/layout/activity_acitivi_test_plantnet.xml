@@ -8,20 +8,23 @@
     tools:context=".AcitiviTestPlantnet">
 
     <!-- Перший рядок з кнопками -->
+
+    <!-- Другий рядок з ImageView -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/firstRow"
         android:layout_width="match_parent"
-        android:layout_height="330dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
         android:paddingTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonCamera"
             android:layout_width="0dp"
-            android:layout_height="272dp"
+            android:layout_height="200dp"
             android:background="@drawable/camerachoise"
             android:gravity="bottom|center_horizontal"
             android:text="Сканувати"
@@ -34,7 +37,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonGallery"
             android:layout_width="0dp"
-            android:layout_height="274dp"
+            android:layout_height="200dp"
             android:background="@drawable/uploadchoise"
             android:gravity="bottom|center_horizontal"
             android:text="Завантажити"
@@ -45,7 +48,6 @@
             app:layout_constraintWidth_percent="0.5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Другий рядок з ImageView -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/twooRow"
         android:layout_width="405dp"
@@ -58,7 +60,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="251dp"
+            android:layout_height="200dp"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
